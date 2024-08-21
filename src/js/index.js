@@ -6,7 +6,7 @@ const projetos = document.querySelectorAll('.projeto');
 botaoMostrarProjetos.addEventListener('click', () => {
     mostrarMaisProjetos();
     botaoMostrarProjetos.classList.add('remover');
-    botaoOcultarProjetos.classList.remove('remover')
+    botaoOcultarProjetos.classList.remove('remover');
 });
 
 function mostrarMaisProjetos() {
