@@ -7,15 +7,20 @@ body{
     font-family: "Poppins", sans-serif;
     margin: 0 auto;
     max-width: 1120px;
-    background: linear-gradient(150deg, #9e00ff, cyan);
+    background: linear-gradient(150deg, #000, cyan);
     background-size: 120% 120%;
 }
 
 .cabecalho{
+    position: sticky;
+    top: 0px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 15px;
+    padding: 20px 15px;
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: top 0.3s;
 }
 
 .cabecalho .logo{
@@ -27,6 +32,7 @@ body{
     line-height: 70px;
     font-family: "Raleway", sans-serif;
     transition: 0.3s;
+    float: left;
 }
 
 .cabecalho a:hover .logo{
@@ -35,15 +41,16 @@ body{
 
 }
 
-.cabecalho .menu li{
+.cabecalho .menu {
     font-size: 20px;
     text-transform: capitalize;
     padding: 10px 20px;
     transition: 0.3s;
+    float: right;
 }
 
-.cabecalho .menu li a:hover{
-    background-color: #20b3ab;
+.cabecalho .menu a:hover{
+    background-color: #9e00ff;
     color: #fff;
     border-radius: 50px;
 }
@@ -134,11 +141,14 @@ body{
 .projetos .projeto h3{
     background-color: black;
     width: 100%;
-    padding-left: 20px;
+    padding-left: 10px;
     padding-bottom: 10px;
     padding-top: 10px;
+    padding-right: 10px;
     position: absolute;
     bottom: 0;
+    font-size: 15px;
+    text-align: justify;
 }
 
 .projetos .projeto .informacoes-projeto{

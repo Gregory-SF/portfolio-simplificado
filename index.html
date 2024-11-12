@@ -23,19 +23,15 @@
 
 </head>
 <body>
-    <header class="cabecalho">
+    <div class="cabecalho" id ="navbar">
         <a href="#">
             <h1 class="logo">GSF</h1>
         </a>
 
         <nav class="menu">
-            <ul>
-                <li>
-                    <a href="#projetos">Meus projetos</a>
-                </li>
-            </ul>
+            <a href="#projetos">Meus projetos</a>
         </nav>
-    </header>
+    </div>
     <section class="home">
         <div class="informacoes">
             <h1>Olá sou Gregory Soares Ferreira</h1>
@@ -64,34 +60,34 @@
 
         <div class="container-projetos">
             <div class="projeto ativo">
-                <a href="https://github.com/Gregory-SF/POO-2024" target="_blank">
+                <a href="https://github.com/Gregory-SF/Ex-persistence" target="_blank">
                     <img src="./src/imagens/Luffy_coringa.jfif" alt="Luffy coringa meo"/>
-                    <h3>Projeto de Programação Orientada a Objetos</h3>
+                    <h3 classe = "nome">Projeto de Persistence e Programação Orientada a Objetos</h3>
 
                     <div class="informacoes-projeto">
-                        <p>Projeto feito usando Java</p>
+                        <p>Projeto de gerenciamento de contas, clientes e movimentações feito usando Java, Hibernate e MySQL de forma a praticar a persistência no banco de dados</p>
+                        <p>Ver projeto no GitHub</p>
+                    </div>
+                </a>
+            </div>
+            <div class="projeto ativo">
+                <a href="https://github.com/Gregory-SF/Decoder-Binario" target="_blank">
+                    <img src="./src/imagens/Luffy_coringa.jfif" alt="Luffy coringa meo"/>
+                    <h3 class="nome">Simulador em C usando instruções em binário</h3>
+
+                    <div class="informacoes-projeto">
+                        <p>Pequeno projeto que recebe instruções em binário de acordo com um padrão específico e executa ações simulando a lógica de programação assembly</p>
                         <p>Ver no GitHub</p>
                     </div>
                 </a>
             </div>
             <div class="projeto ativo">
-                <a href="https://github.com/Gregory-SF/Listas-python" target="_blank">
+                <a href="https://github.com/Gregory-SF/Simulador-processador-java" target="_blank">
                     <img src="./src/imagens/Luffy_coringa.jfif" alt="Luffy coringa meo"/>
-                    <h3>Listas de Exercícios de Python</h3>
+                    <h3 class = "nome"> Simulador em Java usando instruções em binário</h3>
 
                     <div class="informacoes-projeto">
-                        <p>Projeto feito usando Python</p>
-                        <p>Ver no GitHub</p>
-                    </div>
-                </a>
-            </div>
-            <div class="projeto ativo">
-                <a href="https://github.com/Gregory-SF/Prova_Assembly" target="_blank">
-                    <img src="./src/imagens/Luffy_coringa.jfif" alt="Luffy coringa meo"/>
-                    <h3>Exercícios em Assembly para prova de Arquitetura de Computadores</h3>
-
-                    <div class="informacoes-projeto">
-                        <p>Exercícios para verificar se o número e maior ou menor, calcular fatorial e calcular sequencia de fibonacci</p>
+                        <p>Readaptei o simulador para poder praticar meus conhecimentos em Java</p>
                         <p>Ver no GitHub</p>
                     </div>
                 </a>
@@ -99,7 +95,7 @@
             <div class="projeto ativo">
                 <a href="https://github.com/ifpr-paranavai/associacao-api" target="_blank">
                     <img src="./src/imagens/Luffy_coringa.jfif" alt="Luffy coringa meo"/>
-                    <h3>API's do Projeto de um Sitema de Gestão de Associados</h3>
+                    <h3 class = "nome">*Trocar API's do Projeto de um Sitema de Gestão de Associados</h3>
 
                     <div class="informacoes-projeto">
                         <p>Projeto feito usando Javascript, HTML e CSS</p>
@@ -110,7 +106,7 @@
             <div class="projeto">
                 <a href="https://github.com/Gregory-SF/Atividade_Assembly" target="_blank">
                     <img src="./src/imagens/Luffy_coringa.jfif" alt="Luffy coringa meo"/>
-                    <h3>Lista de Exercícios em Assembly</h3>
+                    <h3 class = "nome">Lista de Exercícios em Assembly</h3>
 
                     <div class="informacoes-projeto">
                         <p>Vários exercícios</p>
@@ -121,7 +117,7 @@
             <div class="projeto">
                 <a href="https://github.com/Gregory-SF/portfolio-simplificado" target="_blank">
                     <img src="./src/imagens/Luffy_coringa.jfif" alt="Luffy coringa meo"/>
-                    <h3>Portfólio Pessoal</h3>
+                    <h3 class = "nome">Portfólio Pessoal</h3>
                     <div class="informacoes-projeto">
                         <p>Projeto de Portfólio feito usando Javascript, HTML e CSS</p>
                         <p>Ver no GitHub</p>
@@ -133,6 +129,7 @@
         <button class="btn-mostrar-projetos">Mostrar mais</button>
         <button class="btn-ocultar-projetos remover">Ocultar</button>
     </section>
+
     <script src="./src/js/index.js"></script>
 </body>
 </html>

@@ -25,8 +25,15 @@ function ocultarProjetos() {
         projetoInativo.classList.remove('ativo');
     });
 };
-// function ocultarProjetos() {
-//     projetos.forEach(projeto => {
-//         projeto.classList.remove('ativo');
-//     });
-// };
+
+var prevScrollpos = window.scrollY;
+window.onscroll=function () {
+    var currentScrollpos = window.scrollY;
+    if(prevScrollpos > currentScrollpos){
+        document.getElementById("navbar").style.top = "0";
+    }
+    else{
+        document.getElementById("navbar").style.top = "-150px";
+    }
+    prevScrollpos = currentScrollpos;
+}
