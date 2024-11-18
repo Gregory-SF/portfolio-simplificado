@@ -50,9 +50,11 @@ body{
 }
 
 .cabecalho .menu a:hover{
-    background-color: #9e00ff;
+    border: 2px solid #000;
+    border-width: 2px;
+    padding: 10px;
     color: #fff;
-    border-radius: 50px;
+    border-radius: 100px;
 }
 
 .home{
@@ -73,15 +75,22 @@ body{
 }
 
 .home .informacoes h1{
+    display:block;
     font-family: "Raleway", sans-serif;
     font-size: 45px;
     margin-bottom: 20px;
 }
 
 .home .informacoes p{
+    display: block;
     font-family: "Raleway", sans-serif;
     font-size: 24px;
     margin-bottom: 10px;
+}
+
+.home .informacoes .esconder{
+    display: none;
+    font-size: 0%;
 }
 
 .home .redes-sociais{
@@ -215,4 +224,49 @@ body{
 
 .projetos .btn-ocultar-projetos.remover{
     display: none;
+}
+
+.btn-lang{
+    background: none;
+    color: #000;
+    width: 100px;
+    border: 100px #000;
+    margin: 0 auto;
+    display: none;
+
+    cursor: pointer;
+}
+
+/* .btn-lang:hover{
+    display: none;
+} */
+
+.btn-port .mostrando{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.btn-port .hide{
+    display: none;
+}
+
+.btn-en .hide{
+    display: none;
+}
+
+.hide{
+    display: none;
+}
+
+.shrink{
+    width: 80px;
+    text-align: justify;
+    background-color: black;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 90%;
+    height: 90%;
+    padding: 5px;
 }
