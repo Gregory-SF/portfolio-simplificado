@@ -49,7 +49,11 @@ body{
     float: right;
 }
 
-.cabecalho .menu a:hover{
+.cabecalho .menu .btn-proj{
+    vertical-align: center;
+}
+
+.cabecalho .menu .btn-proj:hover{
     border: 2px solid #000;
     border-width: 2px;
     padding: 10px;
@@ -113,6 +117,15 @@ body{
     color: #20b3ab;
     border: 1px solid #20b3ab;
     transform: scale(1.1);
+}
+
+#foto-greg {
+    border-radius: 90%;
+    margin-top: 10px; 
+    width: 500px;
+    HEIGHT: 500px;
+    object-fit: cover;
+    object-position: 20% 20%;
 }
 
 .projetos{
@@ -226,33 +239,53 @@ body{
     display: none;
 }
 
-.btn-lang{
+.projetos .btn-mostrar-todos-projetos{
     background: none;
-    color: #000;
-    width: 100px;
-    border: 100px #000;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    color: #fff;
+    width: 180px;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 600;
     margin: 0 auto;
-    display: none;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
 }
 
-/* .btn-lang:hover{
-    display: none;
-} */
+.cabecalho .menu .btn-lang{
+    background: none;
+    width: 100px;
+    border: 3px solid #000;
+    clip-path: circle(40%);
+    margin: 0 auto;
+    cursor: pointer;
+}
 
-.btn-port .mostrando{
+.btn-lang:hover{
+    transition: 0.3s;
+}
+
+.btn .port .mostrando{
     width: 100%;
     height: 100%;
     display: flex;
 }
 
-.btn-port .hide{
+.btn .port .hide{
     display: none;
 }
 
 .btn-en .hide{
     display: none;
+}
+
+.bandeira {
+    clip-path: circle(40%);
+    border: 1px solid #000;
+
 }
 
 .hide{

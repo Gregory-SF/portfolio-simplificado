@@ -3,10 +3,10 @@ const projetosInativos = document.querySelectorAll('.projeto:not(.ativo)');
 const botaoOcultarProjetos = document.querySelector('.btn-ocultar-projetos');
 const projetos = document.querySelectorAll('.projeto');
 
-const botaoPort = document.querySelector('.bt-port');
-const textoPort = document.querySelectorAll('#pt');
-const botaoEng = document.querySelector('.btn-en');
-const textoEng = document.querySelectorAll('#es');
+const botaoPort = document.querySelector('.btn-lang');
+const textoPort = document.querySelector('#pt');
+const bandeira = document.querySelector('.bandeira');
+const textoEng = document.querySelector('#en');
 
 botaoMostrarProjetos.addEventListener('click', () => {
     mostrarMaisProjetos();
@@ -19,6 +19,7 @@ function mostrarMaisProjetos() {
         projetoInativo.classList.add('ativo');
     });
 };
+7
 botaoOcultarProjetos.addEventListener('click', () => {
     ocultarProjetos();
     botaoMostrarProjetos.classList.remove('remover');
@@ -32,21 +33,22 @@ function ocultarProjetos() {
 };
 
 botaoPort.addEventListener('click', () => {
-    mostrarTextoPort();
-    botaoPort.classList.add('hide');
-    botaoEng.classList.remove('hide');
+    if(botaoPort.id==="bt-port"){
+        bandeira.src ="src/imagens/bandeira_eua.png";
+        botaoPort.id="bt-eng";
+        mostrarTextoEng();
+    }
+    else{
+        botaoPort.id="bt-port";
+        bandeira.src ="src/imagens/bandiera_brasil.jpg";
+        mostrarTextoPort();
+    }
 });
 
 function mostrarTextoPort() {
     textoEng.classList.add('esconder');
     textoPort.classList.remove('esconder');
 };
-
-botaoEng.addEventListener('click', () => {
-    mostrarTextoEng();
-    botaoMostrarProjetos.classList.remove('hide');
-    botaoOcultarProjetos.classList.add('hide')
-});
 
 function mostrarTextoEng() {
     textoEng.classList.remove('esconder');
@@ -76,3 +78,4 @@ for(const element of document.getElementsByClassName("shrink"))
             size -= 1
         }
     }
+    
