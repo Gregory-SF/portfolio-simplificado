@@ -4,6 +4,7 @@ const projetosInativos = document.querySelectorAll('.projeto:not(.ativo)');
 const projetos = document.querySelectorAll('.projeto');
 const container = document.querySelector('.container-projetos');
 import { getCards } from './github_class.js';
+const repos = [];
 
 botaoMostrarProjetos.addEventListener('click', () => {
     mostrarMaisProjetos();
@@ -11,8 +12,13 @@ botaoMostrarProjetos.addEventListener('click', () => {
 });
 
 async function getRepos() {
-    const repo = await getCards();
-    return repo;
+    const repos = await getCards();
+    console.log('api pega');
+    console.log(repos);
+    return repos;
+    
+    // const repo = await getCards();
+    // repos = repo;
 }
 
 botaoMostrarTudo.addEventListener('click', async () => {
@@ -39,12 +45,18 @@ function mostrarMaisProjetos() {
 async function criarCard() {
     const fullInfo = await getRepos();
 
+    // await getRepos();
+    // const fullInfo = repos;
+
+    console.log('criar cards');
+    console.log(fullInfo);
+    
+
     fullInfo.forEach(info =>{
         const card = document.createElement('div');
         card.className='projeto ativo';
         container.appendChild(card);
         const anchor = document.createElement('a');
-        // anchor.href=info.
         anchor.href=info.html_url;
         anchor.target='_blank';
         card.appendChild(anchor);
