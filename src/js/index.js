@@ -1,4 +1,4 @@
-const botaoMostrarProjetos = document.querySelector('.btn-mostrar-projetos');
+// const botaoMostrarProjetos = document.querySelector('.btn-mostrar-projetos');
 const projetosInativos = document.querySelectorAll('.projeto:not(.ativo)');
 const botaoOcultarProjetos = document.querySelector('.btn-ocultar-projetos');
 const projetos = document.querySelectorAll('.projeto');
@@ -8,11 +8,11 @@ const textoPort = document.querySelector('#pt');
 const bandeira = document.querySelector('.bandeira');
 const textoEng = document.querySelector('#en');
 
-botaoMostrarProjetos.addEventListener('click', () => {
-    mostrarMaisProjetos();
-    botaoMostrarProjetos.classList.add('remover');
-    botaoOcultarProjetos.classList.remove('remover');
-});
+// botaoMostrarProjetos.addEventListener('click', () => {
+//     mostrarMaisProjetos();
+//     botaoMostrarProjetos.classList.add('remover');
+//     botaoOcultarProjetos.classList.remove('remover');
+// });
 
 function mostrarMaisProjetos() {
     projetosInativos.forEach(projetoInativo => {
