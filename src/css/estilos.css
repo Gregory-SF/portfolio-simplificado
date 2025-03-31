@@ -5,22 +5,16 @@ html{
 
 body{
     font-family: "Poppins", sans-serif;
-    margin: 0 auto;
-    max-width: 1120px;
+    margin: 0 50px;
+    /* max-width: 1120px; */
     background: linear-gradient(150deg, #000, cyan);
     background-size: 120% 120%;
 }
 
 .cabecalho{
-    position: sticky;
-    top: 0px;
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 15px 0px;
-    background-color: rgba(0, 0, 0, 0.1);
-    transition: top 0.3s;
 }
 
 .cabecalho .logo{
@@ -46,14 +40,14 @@ body{
     text-transform: capitalize;
     padding: 10px 20px;
     transition: 0.3s;
-    float: right;
+    display: flex;
 }
 
-.cabecalho .menu .btn-proj{
+.cabecalho .menu .btn-pages{
     vertical-align: center;
 }
 
-.cabecalho .menu .btn-proj:hover{
+.cabecalho .menu .btn-pages:hover{
     border: 2px solid #000;
     border-width: 2px;
     padding: 10px;
@@ -61,11 +55,16 @@ body{
     border-radius: 100px;
 }
 
+.pages {
+    align-self: center;
+}
+
 .home{
     display: flex;
     min-height: calc(100vh - 125px);
     align-items: end;
     justify-content: space-between;
+    padding-bottom: 20px;
 }
 
 .home .informacoes{
@@ -75,18 +74,20 @@ body{
     letter-spacing: 2px;
     padding: 0 15px;
     max-width: 60%;
+    padding-bottom: 10px    ;
 }
 
 .home .informacoes h1{
     display:ruby-text;
     font-family: "Raleway", sans-serif;
-    font-size: 40px;
+    font-size: 38px;
+    padding-top: 10px;
 }
 
 .home .informacoes p{
     display: block;
     font-family: "Raleway", sans-serif;
-    font-size: 20px;
+    font-size: 22px;
     margin-bottom: 10px;
 }
 
@@ -96,6 +97,7 @@ body{
 }
 
 .home .redes-sociais{
+    padding-top: 10px;
     display: flex;
     gap: 20px;
 }
@@ -119,10 +121,10 @@ body{
 
 #foto-greg {
     border-radius: 90%;
-    margin-top: 10px; 
+    margin-bottom: 20px; 
     margin-right: 20px; 
-    width: 400px;
-    HEIGHT: 400px;
+    width: 450px;
+    HEIGHT: 450px;
     object-fit: cover;
     object-position: 50% 20%;
 }
