@@ -1,0 +1,6 @@
+*txt
+# /src/pages/*
+# /src/js/*
+
+# !/src/js/index.js
+
