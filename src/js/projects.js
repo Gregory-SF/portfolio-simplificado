@@ -6,6 +6,15 @@ const container = document.querySelector('.container-projetos');
 import { getCards } from './github_class.js';
 const repos = [];
 
+document.addEventListener("DOMContentLoaded", async (event) =>{
+    repos = await getRepos();
+
+    // const temaLocal = localStorage.getItem("tema");
+    // document.body.setAttribute('data-theme',temaLocal);
+    // const btnAlterarTema = document.getElementById("btnAlterarTema");
+    // btnAlterarTema.textContent = btnAlterarTema.textContent == 'Light' ? 'Dark' : 'Light';
+});
+
 botaoMostrarProjetos.addEventListener('click', () => {
     mostrarMaisProjetos();
     botaoMostrarProjetos.classList.add('remover');
