@@ -8,11 +8,27 @@ const textoPort = document.querySelector('#pt');
 const bandeira = document.querySelector('.bandeira');
 const textoEng = document.querySelector('#en');
 
-// botaoMostrarProjetos.addEventListener('click', () => {
-//     mostrarMaisProjetos();
-//     botaoMostrarProjetos.classList.add('remover');
-//     botaoOcultarProjetos.classList.remove('remover');
-// });
+document.addEventListener("DOMContentLoaded", async (event) =>{
+    salvarTemaAtual();
+});
+
+function salvarTemaAtual() {
+    const temaLocal = localStorage.getItem("tema");
+    document.body.setAttribute('data-theme',temaLocal);
+    const btnAlterarTema = document.getElementById("btnAlterarTema");
+    btnAlterarTema.textContent = temaLocal == 'light' ? 'Dark' : 'Light';
+}
+
+function alterarTema() {
+    const tema= document.body.getAttribute("data-theme");
+    const novoTema = tema == 'dark' ? 'light' : 'dark';
+
+    localStorage.setItem("tema", novoTema);
+    document.body.setAttribute('data-theme',novoTema);
+
+    const btnAlterarTema = document.getElementById("btnAlterarTema");
+    btnAlterarTema.textContent = btnAlterarTema.textContent == 'Light' ? 'Dark' : 'Light';
+}
 
 function mostrarMaisProjetos() {
     projetosInativos.forEach(projetoInativo => {
@@ -20,11 +36,6 @@ function mostrarMaisProjetos() {
     });
 };
 
-// botaoOcultarProjetos.addEventListener('click', () => {
-//     ocultarProjetos();
-//     botaoMostrarProjetos.classList.remove('remover');
-//     botaoOcultarProjetos.classList.add('remover')
-// });
 
 function ocultarProjetos() {
     projetosInativos.forEach(projetoInativo => {

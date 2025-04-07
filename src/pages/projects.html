@@ -1,105 +1,130 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gregory Soares Ferreira - Aluno de Engenharia de Software</title>
 
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 
-    <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/estilos.css">
     <link rel="stylesheet" href="../css/responsivo.css">
 
 </head>
+
 <body>
-    <div>
-        <h1>sla</h1>
-    </div>
-    <section class="projetos" id="todos projetos">
-        <h2 class="titulo">Meus projetos</h2>
-
-        <div class="container-projetos">
-            <div class="projeto ativo">
-                <a href="https://github.com/Gregory-SF/Ex-persistence" target="_blank">
-                    <img src="../imagens/i1_v2.png" alt="Luffy coringa meo" width="225px" height="150px"/>
-                    <h3 classe = "nome">Projeto de Persistence e Programação Orientada a Objetos</h3>
-
-                    <div class="informacoes-projeto">
-                        <p class = "shrink">Projeto de gerenciamento de contas, clientes e movimentações feito usando Java, Hibernate e MySQL de forma a praticar a persistência no banco de dados</p>
-                        <p>Ver projeto no GitHub</p>
-                    </div>
-                </a>
-            </div>
-            <div class="projeto ativo">
-                <a href="https://github.com/Gregory-SF/Decoder-Binario" target="_blank">
-                    <img src="../imagens/i2jpg.jpg" alt="Lots of 0 and 1"/>
-                    <h3 class="nome">Simulador em C usando instruções em binário</h3>
-
-                    <div class="informacoes-projeto">
-                        <p class = "shrink">Pequeno projeto que recebe instruções em binário de acordo com um padrão específico e executa ações simulando a lógica de programação assembly</p>
-                        <p>Ver no GitHub</p>
-                    </div>
-                </a>
-            </div>
-            <div class="projeto ativo">
-                <a href="https://github.com/Gregory-SF/Simulador-processador-java" target="_blank">
-                    <img src="../imagens/img3.png" alt="Java simbol" height="166px"/>
-                    <h3 class = "nome"> Simulador em Java usando instruções em binário</h3>
-
-                    <div class="informacoes-projeto">
-                        <p class = "shrink">Readaptei o simulador para poder praticar meus conhecimentos em Java</p>
-                        <p>Ver no GitHub</p>
-                    </div>
-                </a>
-            </div>
-            <div class="projeto ativo">
-                <a href="https://github.com/ifpr-paranavai/associacao-api" target="_blank">
-                    <img src="../imagens/Luffy_coringa.jfif" alt="Luffy coringa meo"/>
-                    <h3 class = "nome">*Trocar API's do Projeto de um Sistema de Gestão de Associados</h3>
-
-                    <div class="informacoes-projeto">
-                        <p class = "shrink">Projeto feito usando Javascript, HTML e CSS</p>
-                        <p>Ver no GitHub</p>
-                    </div>
-                </a>
-            </div>
-            <div class="projeto">
-                <a href="https://github.com/Gregory-SF/web-development-projects" target="_blank">
-                    <img src="../imagens/Luffy_coringa.jfif" alt="Luffy coringa meo"/>
-                    <h3 class = "nome">Exercícios de Programação Web</h3>
-
-                    <div class="informacoes-projeto">
-                        <p class = "shrink">Alguns exercício de HTML, CSS, Javascript, ReactJS, NODEJS dentre outros</p>
-                        <p>Ver no GitHub</p>
-                    </div>
-                </a>
-            </div>
-            <div class="projeto">
-                <a href="https://github.com/Gregory-SF/portfolio-simplificado" target="_blank">
-                    <img src="../imagens/Luffy_coringa.jfif" alt="Luffy coringa meo"/>
-                    <h3 class = "nome">Portfólio Pessoal</h3>
-                    <div class="informacoes-projeto">
-                        <p class = "shrink">Projeto de Portfólio feito usando Javascript, HTML e CSS</p>
-                        <p>Ver no GitHub</p>
-                    </div>
-                </a>
-            </div>
+    <div class="cabecalho" id="navbar">
+        <a href="../../index.html">
+            <h1 class="logo">GSF</h1>
+        </a>
+        <div id="pages" class="pages">
+            <a class="btn-pages" href="#">Meus projetos</a>
+            <!-- To pensando em botar as habilidades e separar por certificados -->
+            <a class="btn-pages" href="certificates.html">Meus certificados</a>
+            <!-- Vai ser profissional e educacional -->
+            <a class="btn-pages" href="experience.html">Experiências</a>
+            <a class="btn-pages" href="contact.html">Entre em contato</a>
         </div>
-        
-        <button class="btn-mostrar-projetos">Mostrar mais</button>
-        <button class="btn-mostrar-todos-projetos">Mostrar tudo</button>
-    </section>
+        <nav class="menu">
+            <button class="btn-lang" id="bt-port">
+                <a href="#pt-br">
+                    <img class="bandeira" src="../imagens/bandiera_brasil.jpg" />
+                </a>
+            </button>
+            <button id="btnAlterarTema" onclick="alterarTema()">Dark</button>
+        </nav>
+    </div>
+
+    <main>
+        <section class="projetos" id="todos projetos">
+            <h2 class="titulo">Meus projetos</h2>
+
+            <div class="container-projetos">
+                <div class="projeto ativo">
+                    <a href="https://github.com/Gregory-SF/Ex-persistence" target="_blank">
+                        <img src="../imagens/i1_v2.png" alt="Luffy coringa meo" width="225px" height="150px" />
+                        <h3 classe="nome">Projeto de Persistence e Programação Orientada a Objetos</h3>
+
+                        <div class="informacoes-projeto">
+                            <p class="shrink">Projeto de gerenciamento de contas, clientes e movimentações feito usando
+                                Java, Hibernate e MySQL de forma a praticar a persistência no banco de dados</p>
+                            <p>Ver projeto no GitHub</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="projeto ativo">
+                    <a href="https://github.com/Gregory-SF/Decoder-Binario" target="_blank">
+                        <img src="../imagens/i2jpg.jpg" alt="Lots of 0 and 1" />
+                        <h3 class="nome">Simulador em C usando instruções em binário</h3>
+
+                        <div class="informacoes-projeto">
+                            <p class="shrink">Pequeno projeto que recebe instruções em binário de acordo com um padrão
+                                específico e executa ações simulando a lógica de programação assembly</p>
+                            <p>Ver no GitHub</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="projeto ativo">
+                    <a href="https://github.com/Gregory-SF/Simulador-processador-java" target="_blank">
+                        <img src="../imagens/img3.png" alt="Java simbol" height="166px" />
+                        <h3 class="nome"> Simulador em Java usando instruções em binário</h3>
+
+                        <div class="informacoes-projeto">
+                            <p class="shrink">Readaptei o simulador para poder praticar meus conhecimentos em Java</p>
+                            <p>Ver no GitHub</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="projeto ativo">
+                    <a href="https://github.com/ifpr-paranavai/associacao-api" target="_blank">
+                        <img src="../imagens/Luffy_coringa.jfif" alt="Luffy coringa meo" />
+                        <h3 class="nome">*Trocar API's do Projeto de um Sistema de Gestão de Associados</h3>
+
+                        <div class="informacoes-projeto">
+                            <p class="shrink">Projeto feito usando Javascript, HTML e CSS</p>
+                            <p>Ver no GitHub</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="projeto">
+                    <a href="https://github.com/Gregory-SF/web-development-projects" target="_blank">
+                        <img src="../imagens/Luffy_coringa.jfif" alt="Luffy coringa meo" />
+                        <h3 class="nome">Exercícios de Programação Web</h3>
+
+                        <div class="informacoes-projeto">
+                            <p class="shrink">Alguns exercício de HTML, CSS, Javascript, ReactJS, NODEJS dentre outros
+                            </p>
+                            <p>Ver no GitHub</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="projeto">
+                    <a href="https://github.com/Gregory-SF/portfolio-simplificado" target="_blank">
+                        <img src="../imagens/Luffy_coringa.jfif" alt="Luffy coringa meo" />
+                        <h3 class="nome">Portfólio Pessoal</h3>
+                        <div class="informacoes-projeto">
+                            <p class="shrink">Projeto de Portfólio feito usando Javascript, HTML e CSS</p>
+                            <p>Ver no GitHub</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <button class="btn-mostrar-projetos">Mostrar mais</button>
+            <button class="btn-mostrar-todos-projetos">Mostrar tudo</button>
+        </section>
+    </main>
     <script type="module" src="../js/projects.js"></script>
 </body>
+
 </html>

@@ -7,7 +7,7 @@ import { getCards } from './github_class.js';
 const repos = [];
 
 document.addEventListener("DOMContentLoaded", async (event) =>{
-    repos = await getRepos();
+    // repos = await getRepos();
 
     // const temaLocal = localStorage.getItem("tema");
     // document.body.setAttribute('data-theme',temaLocal);
@@ -88,45 +88,14 @@ async function criarCard() {
         vergit.innerText='Ver projeto no GitHub';
         container_texto.appendChild(vergit);
     });
-    // const card = document.createElement('div');
-    // card.className='projeto ativo';
-    // container.appendChild(card);
-    // const anchor = document.createElement('a');
-    // // anchor.href=info.html_url;
-    // anchor.href='https://github.com/Gregory-SF?tab=repositories';
-    // anchor.target='_blank';
-    // card.appendChild(anchor);
-    // const img = document.createElement('img');
-    // img.src='../imagens/Luffy_coringa.jfif';
-    // img.alt='Luffy coringa meo';
-    // anchor.appendChild(img);
-    // const titulo = document.createElement('h3');
-    // titulo.className='nome';
-    // titulo.innerText='Projeto de Persistence e Programação Orientada a Objetos';
-    // anchor.appendChild(titulo);
-    // const containertexto = document.createElement('div');
-    // containertexto.className="informacoes-projeto";
-    // anchor.appendChild(containertexto);
-    // const texto = document.createElement('p');
-    // texto.innerHTML='Projeto de gerenciamento de contas, clientes e movimentações feito usando Java, Hibernate e MySQL de forma a praticar a persistência no banco de dados';
-    // texto.className='shrink';
-    // containertexto.appendChild(texto);
-    // const vergit = document.createElement('p');
-    // titulo.innerText='Ver projeto no GitHub';
-    // container_texto.appendChild(vergit);
 }
 
-// var prevScrollpos = window.scrollY;
-// window.onscroll=function () {
-//     var currentScrollpos = window.scrollY;
-//     if(prevScrollpos > currentScrollpos){
-//         document.getElementById("navbar").style.top = "0";
-//     }
-//     else{
-//         document.getElementById("navbar").style.top = "-150px";
-//     }
-//     prevScrollpos = currentScrollpos;
-// }
+function salvarSite(i, info) {
+    localStorage.setItem("link_"+i, info.html_url);
+    localStorage.setItem("nome_"+i, info.name);
+    localStorage.setItem("informacoes-projeto_"+1, info.description);
+}
+
 
 // for(const element of document.getElementsByClassName("shrink"))
 //     {

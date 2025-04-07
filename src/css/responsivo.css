@@ -20,6 +20,10 @@
     .projetos .container-projetos {
       padding: 0 30px;
     }
+
+    #foto-greg {
+        object-position: 10% 10%;
+    }
 }
 
 @media(max-width: 425px) {

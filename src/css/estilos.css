@@ -6,7 +6,6 @@ html{
 body{
     font-family: "Poppins", sans-serif;
     margin: 0 50px;
-    /* max-width: 1120px; */
     background: linear-gradient(150deg, #000, cyan);
     background-size: 120% 120%;
 }
@@ -15,6 +14,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 0;
 }
 
 .cabecalho .logo{
@@ -38,16 +38,16 @@ body{
 .cabecalho .menu {
     font-size: 20px;
     text-transform: capitalize;
-    padding: 10px 20px;
+    padding: 10px;
     transition: 0.3s;
     display: flex;
 }
 
 .cabecalho .menu .btn-pages{
-    vertical-align: center;
+    text-align: center;
 }
 
-.cabecalho .menu .btn-pages:hover{
+.btn-pages:hover{
     border: 2px solid #000;
     border-width: 2px;
     padding: 10px;
@@ -56,6 +56,18 @@ body{
 }
 
 .pages {
+    font-size: 20px;
+    text-transform: capitalize;
+    padding: 10px 20px;
+    transition: 0.3s;
+    display: contents;
+}
+
+#btnAlterarTema{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
     align-self: center;
 }
 
@@ -97,7 +109,6 @@ body{
 }
 
 .home .redes-sociais{
-    padding-top: 10px;
     display: flex;
     gap: 20px;
 }
@@ -211,6 +222,7 @@ body{
 .projetos .btn-mostrar-projetos.remover{
     display: none;
 }
+
 .projetos .btn-ocultar-projetos{
     background: none;
     border: 1px solid #fff;
@@ -255,9 +267,6 @@ body{
 .cabecalho .menu .btn-lang{
     background: none;
     width: 100px;
-    border: 3px solid #000;
-    clip-path: circle(40%);
-    margin: 0 auto;
     cursor: pointer;
 }
 
@@ -280,9 +289,10 @@ body{
 }
 
 .bandeira {
-    clip-path: circle(40%);
-    border: 1px solid #000;
-
+    object-fit: cover;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
 }
 
 .hide{
@@ -299,4 +309,66 @@ body{
     width: 90%;
     height: 90%;
     padding: 5px;
+}
+
+/* Certificates */
+.skills{
+    display: flex;
+    justify-content: space-around;
+    background-color:#301b00;
+    height: 70px;
+}
+
+.technologies{
+    background-color:#301b00;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.technologies:hover{
+    border: 1px solid #20b3ab;
+    border-radius: 10px;
+    transform: scale(1.1);
+}
+
+.certificados{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.certificado{
+    display: flex;
+    flex-direction: column;
+    width: 18%;
+    min-width: 180px;
+    transition: .2s;
+}
+
+.img-certificado {
+    align-self: center;
+    overflow: hidden;
+    padding-top: 10px;
+    width: 90%;
+    aspect-ratio: 1/1;
+    position: relative;
+}
+
+/* Experiences */
+.exp{
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    margin-top: 100px;
+    font-size: 30px;
+}
+
+/* Contact Me */
+
+.mailbox{
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    margin-top: 100px;
 }
