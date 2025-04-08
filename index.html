@@ -10,7 +10,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css" />
 
-    <link rel="stylesheet" href="https://fontawesome.com/icons/moon?f=classic&s=solid" />
+    <!-- <link rel="stylesheet" href="https://fontawesome.com/icons/moon?f=classic&s=solid" /> -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,9 +39,9 @@
             <a class="btn-pages" href="src/pages/contact.html">Entre em contato</a>
         </div>
         <nav class="menu">
-            <button class="btn-lang" id="bt-port">
+            <button class="btn-lang" id="pt" onclick="alterarIdioma()">
                 <a href="#pt-br">
-                    <img class="bandeira" src="./src/imagens/bandiera_brasil.jpg" />
+                    <img id="bandeira" class="bandeira" src="./src/imagens/pt.jpg" />
                 </a>
             </button>
             <button id="btnAlterarTema" onclick="alterarTema()">Dark</button>
@@ -52,16 +52,16 @@
         <div class="informacoes">
             <div id="pt" class="idioma pt">
                 <div>
-                    <h1>Olá sou Gregory Soares Ferreira</h1>
+                    <h1 data-i18n="titulo">Olá sou Gregory Soares Ferreira</h1>
                 </div>
                 <div>
-                    <p>Sou um estudante de Engenharia de Software do IFPR, estou no meu terceiro ano e tenho muita
+                    <p data-i18n="p1">Sou um estudante de Engenharia de Software do IFPR, estou no meu terceiro ano e tenho muita
                         afinidade com programação backend com Java e Spring.</p>
-                    <p>Não possuo nenhuma experiência profissional, mas estou compensando com os meus estudos em
+                    <p data-i18n="p2">Não possuo nenhuma experiência profissional, mas estou compensando com os meus estudos em
                         diversos bootcamps!</p>
-                    <p>Minha experiência com um projeto real foi com um projeto do IFPR, o CEDI, o qual é sobre gestão
+                    <p data-i18n="p3">Minha experiência com um projeto real foi com um projeto do IFPR, o CEDI, o qual é sobre gestão
                         de associados, com implementação do backend em NODEJS e o frontend desenvolvido em ReactJS. </p>
-                    <p>Atualmente estou trabalhando fora da área, mas estou aberto a qualquer oportunidade de adquirir
+                    <p data-i18n="p4">Atualmente estou trabalhando fora da área, mas estou aberto a qualquer oportunidade de adquirir
                         experiências.</p>
                     <ul class="redes-sociais">
                         <li>

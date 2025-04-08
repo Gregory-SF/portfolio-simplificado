@@ -3,13 +3,14 @@ const projetosInativos = document.querySelectorAll('.projeto:not(.ativo)');
 const botaoOcultarProjetos = document.querySelector('.btn-ocultar-projetos');
 const projetos = document.querySelectorAll('.projeto');
 
-const botaoPort = document.querySelector('.btn-lang');
-const textoPort = document.querySelector('#pt');
-const bandeira = document.querySelector('.bandeira');
-const textoEng = document.querySelector('#en');
+// const botaoPort = document.querySelector('.btn-lang');
+// const textoPort = document.querySelector('#pt');
+// const bandeira = document.querySelector('.bandeira');
+// const textoEng = document.querySelector('#en');
 
 document.addEventListener("DOMContentLoaded", async (event) =>{
     salvarTemaAtual();
+    salvarIdiomaAtual();
 });
 
 function salvarTemaAtual() {
@@ -36,35 +37,77 @@ function mostrarMaisProjetos() {
     });
 };
 
-
 function ocultarProjetos() {
     projetosInativos.forEach(projetoInativo => {
         projetoInativo.classList.remove('ativo');
     });
 };
 
-botaoPort.addEventListener('click', () => {
-    if(botaoPort.id==="bt-port"){
-        bandeira.src ="src/imagens/bandeira_eua.png";
-        botaoPort.id="bt-eng";
-        mostrarTextoEng();
-    }
-    else{
-        botaoPort.id="bt-port";
-        bandeira.src ="src/imagens/bandiera_brasil.jpg";
-        mostrarTextoPort();
-    }
-});
+// botaoPort.addEventListener('click', () => {
+//     if(botaoPort.id==="bt-port"){
+//         bandeira.src ="src/imagens/bandeira_eua.png";
+//         botaoPort.id="bt-eng";
+//         mostrarTextoEng();
+//     }
+//     else{
+//         botaoPort.id="bt-port";
+//         bandeira.src ="src/imagens/bandiera_brasil.jpg";
+//         mostrarTextoPort();
+//     }
+// });
 
-function mostrarTextoPort() {
-    textoEng.classList.add('esconder');
-    textoPort.classList.remove('esconder');
-};
+// function mostrarTextoPort() {
+//     textoEng.classList.add('esconder');
+//     textoPort.classList.remove('esconder');
+// };
 
-function mostrarTextoEng() {
-    textoEng.classList.remove('esconder');
-    textoPort.classList.add('esconder');
-};
+// function mostrarTextoEng() {
+//     textoEng.classList.remove('esconder');
+//     textoPort.classList.add('esconder');
+// };
+
+
+function salvarIdiomaAtual() {
+    idiomaAtual = localStorage.getItem("idioma");
+    carregarIdioma(idiomaAtual);
+}
+
+function alterarIdioma(){
+    idiomaAtual = idiomaAtual == "pt"? "en": "pt";
+    localStorage.setItem("idioma", idiomaAtual);
+    carregarIdioma(idiomaAtual);
+}
+
+function carregarIdioma(idioma) {
+    fetch(`/src/json/${idioma}.json`)
+    .then(data => data.json())
+    .then(data => {
+        traduzirPagina(data);
+    });
+}
+
+function traduzirPagina(linguagem) {
+    document.querySelectorAll("[data-i18n]").forEach(elemento =>{
+        console.log(elemento);
+        const chave = elemento.getAttribute("data-i18n");
+        console.log(chave);
+        if(linguagem[chave]){
+            elemento.textContent = linguagem[chave];
+        }
+    });
+
+    document.getElementById("bandeira").setAttribute("src", `/src/imagens/${idiomaAtual}.jpg`);
+
+    /// PARA IMAGENS
+    document.querySelectorAll("[data-i18n-alt]").forEach(elemento =>{
+        console.log(elemento);
+        const chave = elemento.getAttribute("data-i18n-alt");
+        console.log(chave);
+        if(linguagem[chave]){
+            elemento.setAttribute("alt", linguagem[chave]) ;           
+        }
+    });
+}
 
 var prevScrollpos = window.scrollY;
 window.onscroll=function () {
