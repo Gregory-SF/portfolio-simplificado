@@ -9,10 +9,6 @@ const repos = [];
 document.addEventListener("DOMContentLoaded", async (event) =>{
     // repos = await getRepos();
 
-    // const temaLocal = localStorage.getItem("tema");
-    // document.body.setAttribute('data-theme',temaLocal);
-    // const btnAlterarTema = document.getElementById("btnAlterarTema");
-    // btnAlterarTema.textContent = btnAlterarTema.textContent == 'Light' ? 'Dark' : 'Light';
 });
 
 botaoMostrarProjetos.addEventListener('click', () => {
@@ -20,15 +16,12 @@ botaoMostrarProjetos.addEventListener('click', () => {
     botaoMostrarProjetos.classList.add('remover');
 });
 
+
 async function getRepos() {
     const repos = await getCards();
-    console.log('api pega');
     console.log(repos);
     return repos;
-    
-    // const repo = await getCards();
-    // repos = repo;
-}
+};
 
 botaoMostrarTudo.addEventListener('click', async () => {
     // const repos = await getRepos();
@@ -43,13 +36,6 @@ function mostrarMaisProjetos() {
         projetoInativo.classList.add('ativo');
     });
 };
-
-// async function pegarPrimeirpRep() {
-//     const repos = await getRepos();
-//     console.log(repos);
-//     console.log(repos[0]);
-//     return repos[0]
-// }
 
 async function criarCard() {
     const fullInfo = await getRepos();
@@ -90,10 +76,24 @@ async function criarCard() {
     });
 }
 
-function salvarSite(i, info) {
-    localStorage.setItem("link_"+i, info.html_url);
-    localStorage.setItem("nome_"+i, info.name);
-    localStorage.setItem("informacoes-projeto_"+1, info.description);
+// function salvarSite(i, info) {
+//     localStorage.setItem("link_"+i, info.html_url);
+//     localStorage.setItem("nome_"+i, info.name);
+//     localStorage.setItem("informacoes-projeto_"+1, info.description);
+// }
+
+function writeRepoJson(fullInfo) {
+    let cont = 0;
+    fullInfo.forEach(info =>{
+        localStorage.setItem("link_"+cont, info.html_url);
+
+        img.src='../imagens/Luffy_coringa.jfif';
+        img.alt='Luffy coringa meo';
+        titulo.className='nome';
+        anchor.href=info.html_url;
+        titulo.innerText=info.name;
+        texto.innerText=info.description;
+    });
 }
 
 
