@@ -1,21 +1,13 @@
-const botaoMostrarProjetos = document.querySelector('.btn-mostrar-projetos');
+const botaoOcultarProjetos = document.querySelector('.btn-ocultar-projetos');
 const botaoMostrarTudo = document.querySelector('.btn-mostrar-todos-projetos');
-const projetosInativos = document.querySelectorAll('.projeto:not(.ativo)');
-const projetos = document.querySelectorAll('.projeto');
+const projetosPrincipais = document.querySelectorAll('.projeto.ativo');
 const container = document.querySelector('.container-projetos');
 import { getCards } from './github_class.js';
 const repos = [];
 
 document.addEventListener("DOMContentLoaded", async (event) =>{
     // repos = await getRepos();
-
 });
-
-botaoMostrarProjetos.addEventListener('click', () => {
-    mostrarMaisProjetos();
-    botaoMostrarProjetos.classList.add('remover');
-});
-
 
 async function getRepos() {
     const repos = await getCards();
@@ -24,39 +16,53 @@ async function getRepos() {
 };
 
 botaoMostrarTudo.addEventListener('click', async () => {
-    // const repos = await getRepos();
-    // console.log(repos);
-    // repos.forEach(repo => console.log(repo));
-    await criarCard();
+    let areThereProjects = document.querySelector('.projeto:not(.ativo)') == null;
+    botaoMostrarTudo.classList.toggle('hide');
+    botaoOcultarProjetos.classList.toggle('hide');
+    toggleProjetos();
+    if(areThereProjects) await checarStorageOuApi();
 });
 
+async function checarStorageOuApi() {
+    console.log('ta verfificando lá');
+    // if (localStorage.getItem("nome_0")!= null) {
+    if (sessionStorage.getItem("nome_0")!= null) {
+        console.log('ta indo criar pelo storage');
+        criarCard(pegarLocalStorage());
+    } else {
+        console.log('ta indo criar pela api');
+        const fullInfo = await getRepos();
+        criarCard(fullInfo);   
+        salvarSite(fullInfo);
+    }
+}
 
-function mostrarMaisProjetos() {    
-    projetosInativos.forEach(projetoInativo => {
-        projetoInativo.classList.add('ativo');
-    });
-};
-
-async function criarCard() {
-    const fullInfo = await getRepos();
-
-    // await getRepos();
-    // const fullInfo = repos;
-
-    console.log('criar cards');
-    console.log(fullInfo);
+function pegarLocalStorage() {
+    // const qntdRepos = (localStorage.length-2)/3;
+    const qntdRepos = sessionStorage.length/3;
+    let fullInfo = [{}, {}];
+    console.log('ta pegando as coisas do storage');
     
+    for (let i = 0; i < qntdRepos-1; i++) {
+        // fullInfo[i].name = localStorage.getItem("nome_"+i);
+        // fullInfo[i].name = localStorage.getItem("descricao_"+i);
+        // fullInfo[i].name = localStorage.getItem("link_"+i);
+        fullInfo[i] = {name: sessionStorage.getItem("nome_"+i), description: sessionStorage.getItem("descricao_"+i), html_url: sessionStorage.getItem("link_"+i)};
+    }
+    return fullInfo;
+}
 
+function criarCard(fullInfo) {
     fullInfo.forEach(info =>{
         const card = document.createElement('div');
-        card.className='projeto ativo';
+        card.className='projeto';
         container.appendChild(card);
         const anchor = document.createElement('a');
         anchor.href=info.html_url;
         anchor.target='_blank';
         card.appendChild(anchor);
         const img = document.createElement('img');
-        img.src='../imagens/Luffy_coringa.jfif';
+        img.src='../imagens/github_white_test.png';
         img.alt='Luffy coringa meo';
         anchor.appendChild(img);
         const titulo = document.createElement('h3');
@@ -76,29 +82,35 @@ async function criarCard() {
     });
 }
 
-// function salvarSite(i, info) {
-//     localStorage.setItem("link_"+i, info.html_url);
-//     localStorage.setItem("nome_"+i, info.name);
-//     localStorage.setItem("informacoes-projeto_"+1, info.description);
-// }
+function salvarSite(fullInfo) {
+    console.log('ta setando a informação no storage');
+    for (let i = 0; i < fullInfo.length; i++) {
+        // localStorage.setItem("nome_"+i, fullInfo[i].name);
+        // localStorage.setItem("descricao_"+i, fullInfo[i].description);
+        // localStorage.setItem("link_"+i, fullInfo[i].html_url);
+        sessionStorage.setItem("nome_"+i, fullInfo[i].name);
+        sessionStorage.setItem("descricao_"+i, fullInfo[i].description);
+        sessionStorage.setItem("link_"+i, fullInfo[i].html_url);
+    };
+}
 
-function writeRepoJson(fullInfo) {
-    let cont = 0;
-    fullInfo.forEach(info =>{
-        localStorage.setItem("link_"+cont, info.html_url);
+botaoOcultarProjetos.addEventListener('click', () => {
+    toggleProjetos();
+    botaoMostrarTudo.classList.toggle('hide');
+    botaoOcultarProjetos.classList.toggle('hide');
+});
 
-        img.src='../imagens/Luffy_coringa.jfif';
-        img.alt='Luffy coringa meo';
-        titulo.className='nome';
-        anchor.href=info.html_url;
-        titulo.innerText=info.name;
-        texto.innerText=info.description;
+function toggleProjetos() {    
+    const todosProjetos = document.querySelectorAll('.projeto:not(.ativo)');
+    projetosPrincipais.forEach(projeto => {
+        projeto.classList.toggle('hide');
+    });
+    todosProjetos.forEach(projetog => {
+        projetog.classList.toggle('hide');
     });
 }
 
-
-// for(const element of document.getElementsByClassName("shrink"))
-//     {
+// for(const element of document.getElementsByClassName("shrink")) {
 //         var size = parseInt(getComputedStyle(element).getPropertyValue('font-size'));
 //         const parentElement = document.getElementsByClassName("projeto")[0]; 
 //         const parent_width = parseInt(getComputedStyle(parentElement).getPropertyValue('width'));
@@ -107,5 +119,5 @@ function writeRepoJson(fullInfo) {
 //             element.style.fontSize = size + "px"
 //             size -= 1
 //         }
-//     }
+// }
 

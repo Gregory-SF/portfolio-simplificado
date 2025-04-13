@@ -1,13 +1,3 @@
-const botaoMostrarProjetos = document.querySelector('.btn-mostrar-projetos');
-const projetosInativos = document.querySelectorAll('.projeto:not(.ativo)');
-const botaoOcultarProjetos = document.querySelector('.btn-ocultar-projetos');
-const projetos = document.querySelectorAll('.projeto');
-
-// const botaoPort = document.querySelector('.btn-lang');
-// const textoPort = document.querySelector('#pt');
-// const bandeira = document.querySelector('.bandeira');
-// const textoEng = document.querySelector('#en');
-
 document.addEventListener("DOMContentLoaded", async (event) =>{
     salvarTemaAtual();
     salvarIdiomaAtual();
@@ -30,42 +20,6 @@ function alterarTema() {
     const btnAlterarTema = document.getElementById("btnAlterarTema");
     btnAlterarTema.textContent = btnAlterarTema.textContent == 'Light' ? 'Dark' : 'Light';
 }
-
-function mostrarMaisProjetos() {
-    projetosInativos.forEach(projetoInativo => {
-        projetoInativo.classList.add('ativo');
-    });
-};
-
-function ocultarProjetos() {
-    projetosInativos.forEach(projetoInativo => {
-        projetoInativo.classList.remove('ativo');
-    });
-};
-
-// botaoPort.addEventListener('click', () => {
-//     if(botaoPort.id==="bt-port"){
-//         bandeira.src ="src/imagens/bandeira_eua.png";
-//         botaoPort.id="bt-eng";
-//         mostrarTextoEng();
-//     }
-//     else{
-//         botaoPort.id="bt-port";
-//         bandeira.src ="src/imagens/bandiera_brasil.jpg";
-//         mostrarTextoPort();
-//     }
-// });
-
-// function mostrarTextoPort() {
-//     textoEng.classList.add('esconder');
-//     textoPort.classList.remove('esconder');
-// };
-
-// function mostrarTextoEng() {
-//     textoEng.classList.remove('esconder');
-//     textoPort.classList.add('esconder');
-// };
-
 
 function salvarIdiomaAtual() {
     idiomaAtual = localStorage.getItem("idioma");

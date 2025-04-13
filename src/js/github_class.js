@@ -1,4 +1,4 @@
-const GHURL = 'https://api.github.com/users/Gregory-SF/repos'
+const GHURL = 'https://api.github.com/users/Gregory-SF/repos';
 
 class GithubRepo {
     constructor({
@@ -100,9 +100,10 @@ async function makeRequest(link) {
     const response = await fetch(link)
     const data = await response.json()
     return data
-}
-const repo = []
-const repodto = []
+};
+
+const repo = [];
+const repodto = [];
 
 export async function getCards() {
     const data = await makeRequest(GHURL)
