@@ -161,7 +161,7 @@ body{
 }
 
 .projetos .projeto{
-    max-width: 250px;
+    max-width: 225px;
     max-height: 500px;
     position: relative;
 }
@@ -238,7 +238,6 @@ body{
     transition: 0.3s;
 }
 
-
 .cabecalho .menu .btn-lang{
     background: none;
     width: 100px;
@@ -260,6 +259,10 @@ body{
     text-align: justify;
 }
 
+.informacoes-projeto p:not(.shrink){
+    text-align: center;
+    font-weight: 700;
+}
 /* Certificates */
 .skills{
     display: flex;
@@ -306,11 +309,31 @@ body{
 
 /* Experiences */
 .exp{
-    text-align: center;
-    margin: auto;
-    width: 50%;
-    margin-top: 100px;
-    font-size: 30px;
+    margin: 70px 0;
+}
+
+.container-exp{
+    margin: 10px;
+    background-color: #000;
+    border-radius: 20px;
+}
+
+.type{
+    background-color: #301b00;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.job {
+    padding: 20px 50px;
+}
+
+.estudo {
+    padding: 40px;
+}
+
+.facul {
+    padding-bottom: 10px;
 }
 
 /* Contact Me */
