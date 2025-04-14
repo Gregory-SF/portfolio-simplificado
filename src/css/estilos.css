@@ -19,14 +19,12 @@ body{
 
 .cabecalho .logo{
     width: 75px;
-    height: 75px;
     border-radius: 60%;
     border: 2px solid #fff;
     text-align: center;
     line-height: 70px;
     font-family: "Raleway", sans-serif;
     transition: 0.3s;
-    float: left;
 }
 
 .cabecalho a:hover .logo{
@@ -36,15 +34,9 @@ body{
 }
 
 .cabecalho .menu {
-    font-size: 20px;
-    text-transform: capitalize;
     padding: 10px;
     transition: 0.3s;
     display: flex;
-}
-
-.cabecalho .menu .btn-pages{
-    text-align: center;
 }
 
 .btn-pages:hover{
@@ -56,11 +48,11 @@ body{
 }
 
 .pages {
-    font-size: 20px;
+    font-size: 25px;
     text-transform: capitalize;
-    padding: 10px 20px;
     transition: 0.3s;
     display: contents;
+    /* text-align: center; */
 }
 
 #btnAlterarTema{
@@ -69,6 +61,19 @@ body{
     height: 40px;
     cursor: pointer;
     align-self: center;
+}
+
+.cabecalho .menu .btn-lang{
+    background: none;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.bandeira {
+    object-fit: cover;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
 }
 
 .home{
@@ -140,13 +145,9 @@ body{
     object-position: 50% 20%;
 }
 
-.projetos{
-    padding: 70px 0;
-}
-
 .projetos .titulo{
     text-align: center;
-    padding: 60px 0;
+    padding: 40px 0;
     font-size: 45px;
     font-weight: 500;
     text-transform: uppercase;
@@ -238,18 +239,6 @@ body{
     transition: 0.3s;
 }
 
-.cabecalho .menu .btn-lang{
-    background: none;
-    width: 100px;
-    cursor: pointer;
-}
-
-.bandeira {
-    object-fit: cover;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-}
 
 .hide {
     display: none !important;
@@ -339,7 +328,35 @@ body{
 /* Contact Me */
 .mailbox{
     text-align: center;
-    margin: auto;
+    width: 100%;
+    margin-top: 40px;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    height: 40px;
     width: 50%;
-    margin-top: 100px;
+    margin: 10px;
+    font-size: 30px;
+}
+
+textarea {
+    height: 200px;
+    width: 50%;
+    font-size: 30px;
+    margin: 10px;
+}
+
+form button{
+    margin: 10px;
+    font-size: 30px;
+    height: 50px;
 }

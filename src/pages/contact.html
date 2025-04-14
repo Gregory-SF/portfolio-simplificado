@@ -28,12 +28,12 @@
             <h1 class="logo">GSF</h1>
         </a>
         <div class="pages">
-            <a class="btn-pages" href="projects.html" data-i18n="projects-page">Meus projetos</a>
+            <a class="btn-pages" href="projects.html"data-i18n="projects-page">Meus projetos</a>
             <!-- To pensando em botar as habilidades e separar por certificados -->
-            <a class="btn-pages" href="certificates.html" data-i18n="certificates-page">Meus certificados</a>
+            <a class="btn-pages" href="certificates.html"data-i18n="certificates-page">Meus certificados</a>
             <!-- Vai ser profissional e educacional -->
-            <a class="btn-pages" href="experience.html" data-i18n="experience-page">Experiências</a>
-            <a class="btn-pages" href="#" data-i18n="contact-page">Entre em contato</a>
+            <a class="btn-pages" href="experience.html"data-i18n="experience-page">Experiências</a>
+            <a class="btn-pages" href="#"data-i18n="contact-page">Entre em contato</a>
         </div>
         <nav class="menu">
             <button class="btn-lang" id="pt" onclick="alterarIdioma()">
@@ -48,16 +48,15 @@
     <main>
         <section>
             <div class="mailbox">
+                <h2>Entre em contato comigo!</h2>
                 <form action="mailto:gregory16704@gmail.com">
-                    <label for="fname">Nome:</label><br>
-                    <input type="text" id="fname" name="fname"><br>
-                    <label for="lname">Mensagem:</label><br>
-                    <input type="text" id="lname" name="lname"><br>
-                    <label for="email">Email:</label><br>
-                    <input type="text" id="email" name="email"><br><br>
-                    <input type="submit" value="Submit">
+                    <input type="text" id="fname" name="fname" placeholder="Digite seu nome">
+                    <input type="text" id="email" name="email" placeholder="Digite seu email">
+                    <textarea type="text" id="lname" name="lname" placeholder="Digite sua mensagem"></textarea>
+                    <button type="submit" accesskey="s">Enviar</button>
                 </form>
             </div>
+            
         </section>
     </main>
 
