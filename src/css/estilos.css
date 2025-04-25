@@ -1,5 +1,6 @@
 html{
     color: #fff;
+    /* color: #000; */
     scroll-behavior: smooth;
 }
 
@@ -7,6 +8,39 @@ body{
     font-family: "Poppins", sans-serif;
     margin: 0 50px;
     background: linear-gradient(150deg, #000, cyan);
+
+    /* To gostando pra krl */
+    /* background: linear-gradient(720deg, #ffffff, #ffd700); */
+
+    /* Talvez */
+    /* background: linear-gradient(332deg, #ffffff, #ffd700); */
+
+    /* a parte mais escura fica do lado direito, legal os 2 */
+    /* background: linear-gradient(155deg, #ffd700, #ffffff); */
+
+    /* A parte mais escura fica pra cima, legal os 2 */
+    /* background: linear-gradient(184deg, #ffd700, #ffffff); */
+    
+    /* fica bem claroo, e invertido, no dark o preto fica no canto superior esquerdo, e nesse fica no canto inferior direito, mas ainda é meio claro */
+    /* background: linear-gradient(341deg, #ffd700, #ffffff); */
+    
+    /* Muito claro, não gostei não, mas vai que acaba sendo necessário usar */
+    /* background: linear-gradient(324deg, #fffff0, #ffe135); */
+    /* É praticamente igual, mas a parte escura ta mais espalha pela parte de cima, no anterior, o canto SD, ta um pouco mais claro do que nesse daqui */
+    /* background: linear-gradient(159deg, #ffe135, #fffff0); */
+    
+    /* Eu particularmente não achei ruim, apesar de estar bem amarelo, então não sei se encaixaria num light theme, a parte escura tá amarelo maracujá e a parte clara te suco de caju */
+    /* background: linear-gradient(167deg, #ffd700, #fffcad); */
+
+    /* Não gostei, mas acho que é o único desse jeito, netão vale salvar, a parte escura tá no meio / final, em cima tá bem claro  */
+    /* background: linear-gradient(22deg, #ffd700, #fffcad); */
+
+    /* Muito fraco, mas talvez eu salve pq vai que o light theme não esteja tão light, os dois são meio que iguais, mas lados opostos */
+    /* background: linear-gradient(6deg, #fafafa, #ffeb3b); */
+    /* background: linear-gradient(156deg, #ffeb3b, #fafafa); */
+
+    /* Não gostei, amarelo forte e o claro parece cor de caju */
+    /* background: linear-gradient(345deg, #f8f8ff, #ffcc00); */
     background-size: 120% 120%;
 }
 
@@ -21,10 +55,13 @@ body{
     width: 75px;
     border-radius: 60%;
     border: 2px solid #fff;
+    /* border: 2px solid #000; */
     text-align: center;
     line-height: 70px;
     font-family: "Raleway", sans-serif;
     transition: 0.3s;
+    color: #fff;
+    /* color: #000; */
 }
 
 .cabecalho a:hover .logo{
@@ -44,6 +81,7 @@ body{
     border-width: 2px;
     padding: 10px;
     color: #fff;
+    /* color: #000; */
     border-radius: 100px;
 }
 
@@ -52,7 +90,12 @@ body{
     text-transform: capitalize;
     transition: 0.3s;
     display: contents;
-    /* text-align: center; */
+    text-align: center;;
+}
+
+.btn-pages{
+    /* color: #000; */
+    color: #FFF;
 }
 
 #btnAlterarTema{
@@ -91,7 +134,7 @@ body{
     letter-spacing: 2px;
     padding: 0 15px;
     max-width: 60%;
-    padding-bottom: 10px    ;
+    padding-bottom: 10px;
 }
 
 .home .informacoes h1{
@@ -108,11 +151,6 @@ body{
     margin-bottom: 10px;
 }
 
-.home .informacoes .esconder{
-    display: none;
-    font-size: 0%;
-}
-
 .home .redes-sociais{
     display: flex;
     gap: 20px;
@@ -120,6 +158,7 @@ body{
 
 .home .redes-sociais a i{
     border: 1px solid #fff;
+    /* border: 1px solid #000; */
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -127,6 +166,8 @@ body{
     text-align: center;
     font-size: 26px;
     transition: 0.4s;
+    color: #fff;
+    /* color: #000; */
 }
 
 .home .redes-sociais a i:hover{
@@ -239,7 +280,6 @@ body{
     transition: 0.3s;
 }
 
-
 .hide {
     display: none !important;
 }
@@ -303,7 +343,9 @@ body{
 
 .container-exp{
     margin: 10px;
-    background-color: #000;
+    margin-top: 20px;
+    /* background-color: #000; */
+    background-color: #FFF;
     border-radius: 20px;
 }
 
@@ -317,22 +359,25 @@ body{
     padding: 20px 50px;
 }
 
-.estudo {
-    padding: 40px;
-}
-
 .facul {
     padding-bottom: 10px;
+}
+
+.estudo {
+    padding: 20px 40px;
 }
 
 /* Contact Me */
 .mailbox{
     text-align: center;
     width: 100%;
-    margin-top: 40px;
+    margin-top: 20px;
     font-size: 30px;
+    padding: 10px 0px;
     display: flex;
     flex-direction: column;
+    background-color: rgb(22 22 22 / 15%);
+    border-radius: 50px;
 }
 
 form {
@@ -345,18 +390,29 @@ input {
     height: 40px;
     width: 50%;
     margin: 10px;
-    font-size: 30px;
+    font-size: 25px;
+    border-radius: 15px;
+    padding: 15px;
+    border: none;
+    box-sizing: border-box;
+    resize: none;
 }
 
 textarea {
     height: 200px;
     width: 50%;
-    font-size: 30px;
+    font-size: 25px;
     margin: 10px;
+    border-radius: 15px;
+    padding: 10px;
+    font-family: arial;
 }
 
 form button{
     margin: 10px;
-    font-size: 30px;
+    font-size: 20px;
     height: 50px;
+    width: 100px;
+    border-radius: 15px;
+    cursor: pointer;
 }
