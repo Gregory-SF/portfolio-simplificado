@@ -338,25 +338,29 @@ body{
 
 /* Experiences */
 .exp{
-    margin: 70px 0;
+    margin: 40px 0;
 }
 
-.container-exp{
+.container-exp {
     margin: 10px;
     margin-top: 20px;
-    /* background-color: #000; */
-    background-color: #FFF;
+    background-color: #000000db;
+    /* background-color: #FFF; */
     border-radius: 20px;
 }
 
-.type{
-    background-color: #301b00;
-    padding: 20px;
-    border-radius: 20px;
+.type {
+    background-color: #4c310d;
+    padding: 10px 20px;
+    font-size: 35px;
+}
+
+.profissional {
+    padding: 20px 40px 0px;
 }
 
 .job {
-    padding: 20px 50px;
+    padding-bottom: 20px;
 }
 
 .facul {
