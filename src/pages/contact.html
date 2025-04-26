@@ -49,10 +49,10 @@
         <section>
             <div class="mailbox">
                 <h2>Entre em contato comigo!</h2>
-                <form action="mailto:gregory16704@gmail.com ">
-                    <input type="text" id="fname" name="fname" placeholder="Digite seu nome">
+                <form onsubmit="enviarEmail()">
+                    <input type="text" id="name" name="fname" placeholder="Digite seu nome">
                     <input type="text" id="email" name="email" placeholder="Digite seu email">
-                    <textarea type="text" id="lname" name="lname" placeholder="Digite sua mensagem"></textarea>
+                    <textarea type="text" id="text" name="text" placeholder="Digite sua mensagem"></textarea>
                     <button type="submit" accesskey="s">Enviar</button>
                 </form>
             </div>

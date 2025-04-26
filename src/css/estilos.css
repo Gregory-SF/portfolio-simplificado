@@ -184,6 +184,7 @@ body{
     HEIGHT: 450px;
     object-fit: cover;
     object-position: 50% 20%;
+    border: 1px solid #000;
 }
 
 .projetos .titulo{
@@ -292,6 +293,7 @@ body{
     text-align: center;
     font-weight: 700;
 }
+
 /* Certificates */
 .skills{
     display: flex;
@@ -305,35 +307,33 @@ body{
     color: #fff;
     cursor: pointer;
     font-size: 20px;
+    padding: 0px 20px;
 }
 
 .technologies:hover{
-    border: 1px solid #20b3ab;
+    border: 2px solid #000;
     border-radius: 10px;
-    transform: scale(1.1);
+    padding: 0px 30px;
 }
 
 .certificados{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    gap: 20px;
 }
 
 .certificado{
     display: flex;
     flex-direction: column;
-    width: 18%;
-    min-width: 180px;
-    transition: .2s;
+    width: 380px;
+    height: 280px;
 }
 
 .img-certificado {
-    align-self: center;
     overflow: hidden;
     padding-top: 10px;
-    width: 90%;
-    aspect-ratio: 1/1;
-    position: relative;
+    OBJECT-FIT: cover;
 }
 
 /* Experiences */
