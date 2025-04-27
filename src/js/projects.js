@@ -1,5 +1,5 @@
 const botaoOcultarProjetos = document.querySelector('.btn-ocultar-projetos');
-const botaoMostrarTudo = document.querySelector('.btn-mostrar-todos-projetos');
+const botaoMostrarTudo = document.querySelector('.btn-mostrar-projetos');
 const projetosPrincipais = document.querySelectorAll('.projeto.ativo');
 const container = document.querySelector('.container-projetos');
 import { getCards } from './github_class.js';

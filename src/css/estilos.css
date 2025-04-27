@@ -260,7 +260,7 @@ body{
     transition: 0.3s;
 }
 
-.btn-mostrar-todos-projetos{
+.btn-mostrar-projetos{
     background: none;
     border: 1px solid #fff;
     border-radius: 15px;
@@ -276,7 +276,7 @@ body{
     cursor: pointer;
 }
 
-.btn-mostrar-todos-projetos:hover{
+.btn-mostrar-projetos:hover{
     background-color: #9443d8;
     transition: 0.3s;
 }
