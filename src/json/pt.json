@@ -7,5 +7,13 @@
     "p1": "Sou um estudante de Engenharia de Software do IFPR, estou no meu terceiro ano e tenho muita afinidade com programação backend com Java e Spring.",
     "p2": "Não possuo nenhuma experiência profissional, mas estou compensando com os meus estudos em diversos bootcamps!",
     "p3": "Minha experiência com um projeto real foi com um projeto do IFPR, o CEDI, o qual é sobre gestão de associados, com implementação do backend em NODEJS e o frontend desenvolvido em ReactJS.",
-    "p4": "Atualmente estou trabalhando fora da área, mas estou aberto a qualquer oportunidade de adquirir experiências."
+    "p4": "Atualmente estou trabalhando fora da área, mas estou aberto a qualquer oportunidade de adquirir experiências.",
+
+
+
+    "form-titulo": "Entre em contato comigo!",
+    "form-nome": "Digite seu nome",
+    "form-email": "Digite seu email",
+    "form-texto": "Digite sua mensagem",
+    "form-btn": "Enviar"
 }

@@ -48,12 +48,12 @@
     <main>
         <section>
             <div class="mailbox">
-                <h2>Entre em contato comigo!</h2>
-                <form onsubmit="enviarEmail()">
-                    <input type="text" id="name" name="fname" placeholder="Digite seu nome">
-                    <input type="text" id="email" name="email" placeholder="Digite seu email">
-                    <textarea type="text" id="text" name="text" placeholder="Digite sua mensagem"></textarea>
-                    <button type="submit" accesskey="s">Enviar</button>
+                <h2 data-i18n="form-titulo">Entre em contato comigo!</h2>
+                <form onsubmit="enviarEmail(event)">
+                    <input type="text" id="name" name="name" data-i18n-form="form-nome" placeholder="Digite seu nome">
+                    <input type="text" id="email" name="email" data-i18n-form="form-email" placeholder="Digite seu email">
+                    <textarea type="text" id="text" name="text" data-i18n-form="form-texto" placeholder="Digite sua mensagem"></textarea>
+                    <button type="submit" data-i18n="form-btn" accesskey="s">Enviar</button>
                 </form>
             </div>
             

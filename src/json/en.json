@@ -8,5 +8,14 @@
     "p2": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores tempore quasi maxime voluptas, quibusdam vel impedit repudiandae optio, dolorem nemo quidem quae eius doloribus, totam exercitationem saepe esse quia ut?.",
     "p3": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores tempore quasi maxime voluptas, quibusdam vel impedit repudiandae optio, dolorem nemo quidem quae eius doloribus, totam exercitationem saepe esse quia ut?.",
     "p4": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores tempore quasi maxime voluptas, quibusdam vel impedit repudiandae optio, dolorem nemo quidem quae eius doloribus, totam exercitationem saepe esse quia ut?.",
-    "img-src": "../imagens/bandeira_eua.png"
+    "img-src": "../imagens/bandeira_eua.png",
+
+
+
+
+    "form-titulo": "Contact me!",
+    "form-nome": "Write your name",
+    "form-email": "Write your email",
+    "form-texto": "Write your message",
+    "form-btn": "Send"
 }

@@ -42,12 +42,13 @@ function carregarIdioma(idioma) {
 
 function traduzirPagina(linguagem) {
     document.querySelectorAll("[data-i18n]").forEach(elemento =>{
-        console.log(elemento);
+        // console.log(elemento);
         const chave = elemento.getAttribute("data-i18n");
-        console.log(chave);
+        // console.log(chave);
         if(linguagem[chave]){
             elemento.textContent = linguagem[chave];
         }
+
     });
 
     document.getElementById("bandeira").setAttribute("src", `/src/imagens/${idiomaAtual}.jpg`);
@@ -59,6 +60,15 @@ function traduzirPagina(linguagem) {
         console.log(chave);
         if(linguagem[chave]){
             elemento.setAttribute("alt", linguagem[chave]) ;           
+        }
+    });
+
+    /// PARA FORMS
+    document.querySelectorAll("[data-i18n-form]").forEach(elemento =>{
+        const chave = elemento.getAttribute("data-i18n-form");
+        if(linguagem[chave]){
+            elemento.textContent = '';
+            elemento.setAttribute('placeholder',linguagem[chave]);
         }
     });
 }
@@ -86,4 +96,14 @@ window.onscroll=function () {
 //             size -= 1
 //         }
 //     }
+
+function enviarEmail(event) {
+    event.preventDefault();
+    const nome = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const texto = document.getElementById('text').value;
+
+    const mailtoLink = `mailto:gregory16704@gmail.com?subject=${nome} estou te contactando por meio do seu portfólio&body=${texto}`;
+    window.open(location.href=mailtoLink, '_blank');
+}
     
