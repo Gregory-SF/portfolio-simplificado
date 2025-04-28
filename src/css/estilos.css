@@ -1,5 +1,7 @@
+@import url('variables.css');
+
 html{
-    color: #fff;
+    /* color: #fff; */
     /* color: #000; */
     scroll-behavior: smooth;
 }
@@ -7,7 +9,8 @@ html{
 body{
     font-family: "Poppins", sans-serif;
     margin: 0 50px;
-    background: linear-gradient(150deg, #000, cyan);
+    background: var(--bg-color);
+    color: var(--text-color);
 
     /* To gostando pra krl */
     /* background: linear-gradient(720deg, #ffffff, #ffd700); */
@@ -54,20 +57,16 @@ body{
 .logo{
     width: 75px;
     border-radius: 60%;
-    border: 2px solid #fff;
-    /* border: 2px solid #000; */
+    border: 2px solid var(--text-color);
     text-align: center;
     line-height: 70px;
     font-family: "Raleway", sans-serif;
     transition: 0.3s;
-    color: #fff;
-    /* color: #000; */
 }
 
 .logo:hover{
     color: #20b3ab;
     border: 2px solid #20b3ab;
-
 }
 
 .pages {
@@ -78,17 +77,10 @@ body{
     text-align: center;;
 }
 
-.btn-pages{
-    /* color: #000; */
-    color: #FFF;
-}
-
 .btn-pages:hover{
-    border: 2px solid #000;
+    border: 2px solid var(--pages-hover);
     border-width: 2px;
     padding: 10px;
-    color: #fff;
-    /* color: #000; */
     border-radius: 100px;
 }
 
@@ -157,7 +149,7 @@ body{
 }
 
 .redes-sociais a i{
-    border: 1px solid #fff;
+    border: 1px solid var(--text-color);
     /* border: 1px solid #000; */
     border-radius: 50%;
     width: 50px;
@@ -166,8 +158,6 @@ body{
     text-align: center;
     font-size: 26px;
     transition: 0.4s;
-    color: #fff;
-    /* color: #000; */
 }
 
 .redes-sociais a i:hover{
@@ -219,6 +209,7 @@ body{
     padding: 10px;
     font-size: 16px;
     text-transform: capitalize;
+    color: #fff;
 }
 
 .informacoes-projeto{
@@ -232,6 +223,7 @@ body{
     flex-direction: column;
     justify-content: space-between;
     text-align: justify;
+    color: #fff;
 }
 
 .informacoes-projeto:hover{
@@ -239,32 +231,11 @@ body{
     background-color: #000;
 }  
 
-.btn-ocultar-projetos{
-    background: none;
-    border: 1px solid #fff;
-    border-radius: 15px;
-    color: #fff;
-    width: 180px;
-    padding: 20px;
-    font-size: 18px;
-    font-weight: 600;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-
-.btn-ocultar-projetos:hover{
-    background-color: #9443d8;
-    transition: 0.3s;
-}
-
 .btn-mostrar-projetos{
-    background: none;
-    border: 1px solid #fff;
+    background: var(--bg-btn);
+    border: 1px solid var(--text-color);
     border-radius: 15px;
-    color: #fff;
+    color: var(--btn-text);
     width: 250px;
     padding: 20px;
     font-size: 18px;
@@ -277,6 +248,27 @@ body{
 }
 
 .btn-mostrar-projetos:hover{
+    background-color: #9443d8;
+    transition: 0.3s;
+}
+
+.btn-ocultar-projetos{
+    background: none;
+    border: 1px solid var(--text-color);
+    border-radius: 15px;
+    color: var(--btn-text);
+    width: 180px;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.btn-ocultar-projetos:hover{
     background-color: #9443d8;
     transition: 0.3s;
 }
@@ -298,13 +290,13 @@ body{
 .skills{
     display: flex;
     justify-content: space-around;
-    background-color:#301b00;
+    background-color:var(--type);
     height: 70px;
 }
 
 .technologies{
-    background-color:#301b00;
-    color: #fff;
+    background-color:transparent;
+    color: var(--text-color);
     cursor: pointer;
     font-size: 20px;
     padding: 0px 20px;
@@ -344,13 +336,12 @@ body{
 .container-exp {
     margin: 10px;
     margin-top: 20px;
-    background-color: #000000db;
-    /* background-color: #FFF; */
+    background-color: var(--bg-container);
     border-radius: 20px;
 }
 
 .type {
-    background-color: #4c310d;
+    background-color: var(--type);
     padding: 10px 20px;
     font-size: 35px;
 }
@@ -419,4 +410,6 @@ form button{
     width: 100px;
     border-radius: 15px;
     cursor: pointer;
+    background-color: var(--bg-btn);
+    color: var(--btn-text);
 }

@@ -1,0 +1,33 @@
+:root{
+    --bg-color:linear-gradient(150deg, #000, cyan);
+
+    --text-color: #fff;
+
+    --pages-hover: #000;
+
+    --bg-container: #000000db;
+
+    --type: #4c310d;
+
+    --bg-btn: #fff;
+
+    --btn-text: #000;
+}
+
+[data-theme="light"]{
+    --bg-color:linear-gradient(324deg, #fffff0, #ffe135);
+    
+    --text-color: #000;
+
+    --pages-hover: #3e6990;
+
+    --bg-container: #ccdbdc9e;
+
+    --type: #4E878C;
+
+    --bg-btn: #000;
+
+    --btn-text: #fff;
+
+
+}
