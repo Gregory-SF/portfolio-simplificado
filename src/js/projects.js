@@ -64,7 +64,7 @@ function criarCard(fullInfo) {
         const img = document.createElement('img');
         const tema = localStorage.getItem('tema');
         img.src=`../imagens/gh_${tema}.png`;
-        img.alt='Luffy coringa meo';
+        img.alt='Imagem github';
         anchor.appendChild(img);
         const titulo = document.createElement('h3');
         titulo.className='nome';
