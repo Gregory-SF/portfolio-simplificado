@@ -15,6 +15,7 @@
 }
 
 [data-theme="light"]{
+    /* A mudar */
     --bg-color:linear-gradient(324deg, #fffff0, #ffe135);
     
     --text-color: #000;

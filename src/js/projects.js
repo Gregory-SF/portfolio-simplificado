@@ -62,7 +62,8 @@ function criarCard(fullInfo) {
         anchor.target='_blank';
         card.appendChild(anchor);
         const img = document.createElement('img');
-        img.src='../imagens/github_white_test.png';
+        const tema = localStorage.getItem('tema');
+        img.src=`../imagens/gh_${tema}.png`;
         img.alt='Luffy coringa meo';
         anchor.appendChild(img);
         const titulo = document.createElement('h3');

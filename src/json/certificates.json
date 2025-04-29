@@ -1,0 +1,74 @@
+
+[
+    {
+        "title": "Certificado preparatório para a prova AZ204",
+        "image": "../imagens/Azure_204.jpg",
+        "skills": [
+            "Azure",
+            "Cloud"            
+        ]
+    },
+    {
+        "title": "Certificado sobre Github Copilot",
+        "image": "../imagens/Copilot_certificate.jpg",
+        "skills": [
+            "Miscelaneous"
+        ]    
+    },
+    {
+        "title": "Certificado de Bootcamp Java com Spring",
+        "image": "../imagens/Backend_Java_Spring.jpg",
+        "skills": [
+            "Java",
+            "Spring"
+        ]
+    },
+    {
+        "title": "Certificado de Bootcamp introdução a Azure",
+        "image": "../imagens/Azure_essentials.jpg",
+        "skills": [
+            "Azure",
+            "Cloud"
+        ]
+    },
+    {
+        "title": "Certificado lógica de programação com JavaScript",
+        "image": "../imagens/Logica_programacao_Javascript.jpg",
+        "skills": [
+            "Javascript"
+        ]
+    },
+    {
+        "title": "Certificado de uma imersão de backend com Javascript",
+        "image": "../imagens/Imersao_backend_alura.jpg",
+        "skills": [
+            "Javascript",
+            "Node.js"
+        ]
+    },
+    {
+        "title": "Certificado de metodologias ágeis",
+        "image": "../imagens/Metodologias_ageis.jpg",
+        "skills": [
+            "Miscelaneous"
+        ]
+    },
+    {
+        "title": "Certificado de um curso de backend com Javascript",
+        "image": "../imagens/Backend_ada_tech.jpg",
+        "skills": [
+            "Javascript",
+            "Node.js",
+            "Typescript"
+        ]    
+    },
+    {
+        "title": "Certificado do módulo de POO com JavaScript e typescript",
+        "image": "../imagens/POO_Javascript.jpg",
+        "skills": [
+            "Typescript",
+            "Javascript",
+            "Node.js"
+        ]
+    }
+]

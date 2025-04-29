@@ -97,6 +97,7 @@ window.onscroll=function () {
 //         }
 //     }
 
+// Contact me
 function enviarEmail(event) {
     event.preventDefault();
     const nome = document.getElementById('name').value;
