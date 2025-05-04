@@ -33,7 +33,7 @@ function alterarIdioma(){
 }
 
 function carregarIdioma(idioma) {
-    fetch(`/src/json/${idioma}.json`)
+    fetch(`/portfolio-simplificado/src/json/${idioma}.json`)
     .then(data => data.json())
     .then(data => {
         traduzirPagina(data);
@@ -51,7 +51,7 @@ function traduzirPagina(linguagem) {
 
     });
 
-    document.getElementById("bandeira").setAttribute("src", `/src/imagens/${idiomaAtual}.jpg`);
+    document.getElementById("bandeira").setAttribute("src", `/portfolio-simplificado/src/imagens/${idiomaAtual}.jpg`);
 
     /// PARA IMAGENS
     document.querySelectorAll("[data-i18n-alt]").forEach(elemento =>{
@@ -84,6 +84,18 @@ window.onscroll=function () {
     }
     prevScrollpos = currentScrollpos;
 }
+
+// for(const element of document.getElementsByClassName("shrink"))
+//     {
+//         var size = parseInt(getComputedStyle(element).getPropertyValue('font-size'));
+//         const parentElement = document.getElementsByClassName("projeto")[0]; 
+//         const parent_width = parseInt(getComputedStyle(parentElement).getPropertyValue('width'));
+//         while(element.offsetWidth > parent_width)
+//         {
+//             element.style.fontSize = size + "px"
+//             size -= 1
+//         }
+//     }
 
 // Contact me
 function enviarEmail(event) {
