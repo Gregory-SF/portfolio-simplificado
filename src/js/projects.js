@@ -7,6 +7,7 @@ const repos = [];
 
 document.addEventListener("DOMContentLoaded", async (event) =>{
     // repos = await getRepos();
+    checarTema();
 });
 
 async function getRepos() {
@@ -106,19 +107,27 @@ function toggleProjetos() {
     projetosPrincipais.forEach(projeto => {
         projeto.classList.toggle('hide');
     });
-    todosProjetos.forEach(projetog => {
-        projetog.classList.toggle('hide');
+    todosProjetos.forEach(projeto => {
+        projeto.classList.toggle('hide');
     });
 }
 
-// for(const element of document.getElementsByClassName("shrink")) {
-//         var size = parseInt(getComputedStyle(element).getPropertyValue('font-size'));
-//         const parentElement = document.getElementsByClassName("projeto")[0]; 
-//         const parent_width = parseInt(getComputedStyle(parentElement).getPropertyValue('width'));
-//         while(element.offsetWidth > parent_width)
-//         {
-//             element.style.fontSize = size + "px"
-//             size -= 1
-//         }
-// }
+function checarTema() {
+    const tema = localStorage.getItem("tema");
+    const projs = document.querySelectorAll('.projeto');
+    projs.forEach(projeto => {
+        projeto.firstElementChild.firstElementChild.src=`../imagens/gh_${tema}.png`;
+    });
+}
+
+    // for(const element of document.getElementsByClassName("shrink")) {
+    //         var size = parseInt(getComputedStyle(element).getPropertyValue('font-size'));
+    //         const parentElement = document.getElementsByClassName("projeto")[0]; 
+    //         const parent_width = parseInt(getComputedStyle(parentElement).getPropertyValue('width'));
+    //         while(element.offsetWidth > parent_width)
+    //         {
+    //             element.style.fontSize = size + "px"
+    //             size -= 1
+    //         }
+    // }
 

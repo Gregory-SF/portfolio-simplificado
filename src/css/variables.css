@@ -12,6 +12,8 @@
     --bg-btn: #fff;
 
     --btn-text: #000;
+
+    --bg-cabecalho: #ffffff17;
 }
 
 [data-theme="light"]{
@@ -30,5 +32,5 @@
 
     --btn-text: #fff;
 
-
+    --bg-cabecalho: #00000017;
 }

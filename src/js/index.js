@@ -85,18 +85,6 @@ window.onscroll=function () {
     prevScrollpos = currentScrollpos;
 }
 
-// for(const element of document.getElementsByClassName("shrink"))
-//     {
-//         var size = parseInt(getComputedStyle(element).getPropertyValue('font-size'));
-//         const parentElement = document.getElementsByClassName("projeto")[0]; 
-//         const parent_width = parseInt(getComputedStyle(parentElement).getPropertyValue('width'));
-//         while(element.offsetWidth > parent_width)
-//         {
-//             element.style.fontSize = size + "px"
-//             size -= 1
-//         }
-//     }
-
 // Contact me
 function enviarEmail(event) {
     event.preventDefault();
