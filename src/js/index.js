@@ -1,3 +1,5 @@
+const json = "src/json/en.json";
+
 document.addEventListener("DOMContentLoaded", async (event) =>{
     salvarTemaAtual();
     salvarIdiomaAtual();
@@ -33,6 +35,8 @@ function alterarIdioma(){
 }
 
 function carregarIdioma(idioma) {
+    console.log(idioma);
+    
     fetch(`/src/json/${idioma}.json`)
     .then(data => data.json())
     .then(data => {
@@ -48,7 +52,6 @@ function traduzirPagina(linguagem) {
         if(linguagem[chave]){
             elemento.textContent = linguagem[chave];
         }
-
     });
 
     document.getElementById("bandeira").setAttribute("src", `/src/imagens/${idiomaAtual}.jpg`);
