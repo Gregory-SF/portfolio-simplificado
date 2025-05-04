@@ -1,3 +1,5 @@
+const json = "src/json/en.json";
+
 document.addEventListener("DOMContentLoaded", async (event) =>{
     salvarTemaAtual();
     salvarIdiomaAtual();
@@ -32,7 +34,7 @@ function alterarIdioma(){
     carregarIdioma(idiomaAtual);
 }
 
-function carregarIdioma(idioma) {
+function carregarIdioma(idioma) {    
     fetch(`/portfolio-simplificado/src/json/${idioma}.json`)
     .then(data => data.json())
     .then(data => {
@@ -48,7 +50,6 @@ function traduzirPagina(linguagem) {
         if(linguagem[chave]){
             elemento.textContent = linguagem[chave];
         }
-
     });
 
     document.getElementById("bandeira").setAttribute("src", `/portfolio-simplificado/src/imagens/${idiomaAtual}.jpg`);
