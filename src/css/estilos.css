@@ -1,12 +1,12 @@
 @import url('variables.css');
 
-html{
+html {
     /* color: #fff; */
     /* color: #000; */
     scroll-behavior: smooth;
 }
 
-body{
+body {
     font-family: "Poppins", sans-serif;
     margin: 0 50px;
     background: var(--bg-color);
@@ -23,15 +23,15 @@ body{
 
     /* A parte mais escura fica pra cima, legal os 2 */
     /* background: linear-gradient(184deg, #ffd700, #ffffff); */
-    
+
     /* fica bem claroo, e invertido, no dark o preto fica no canto superior esquerdo, e nesse fica no canto inferior direito, mas ainda é meio claro */
     /* background: linear-gradient(341deg, #ffd700, #ffffff); */
-    
+
     /* Muito claro, não gostei não, mas vai que acaba sendo necessário usar */
     /* background: linear-gradient(324deg, #fffff0, #ffe135); */
     /* É praticamente igual, mas a parte escura ta mais espalha pela parte de cima, no anterior, o canto SD, ta um pouco mais claro do que nesse daqui */
     /* background: linear-gradient(159deg, #ffe135, #fffff0); */
-    
+
     /* Eu particularmente não achei ruim, apesar de estar bem amarelo, então não sei se encaixaria num light theme, a parte escura tá amarelo maracujá e a parte clara te suco de caju */
     /* background: linear-gradient(167deg, #ffd700, #fffcad); */
 
@@ -47,7 +47,7 @@ body{
     background-size: 120% 120%;
 }
 
-.cabecalho{
+.cabecalho {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -57,7 +57,7 @@ body{
     border-bottom-right-radius: 30px;
 }
 
-.logo{
+.logo {
     width: 75px;
     border-radius: 60%;
     border: 2px solid var(--text-color);
@@ -67,7 +67,7 @@ body{
     transition: 0.3s;
 }
 
-.logo:hover{
+.logo:hover {
     color: #20b3ab;
     border: 2px solid #20b3ab;
 }
@@ -77,16 +77,17 @@ body{
     text-transform: capitalize;
     transition: 0.3s;
     display: contents;
-    text-align: center;;
+    text-align: center;
+    ;
 }
 
-.btn-pages:not(.clicked):hover{
+.btn-pages:not(.clicked):hover {
     border: 2px solid var(--pages-hover);
     padding: 10px;
     border-radius: 100px;
 }
 
-.clicked{
+.clicked {
     /* border: 2px solid var(--pages-hover); */
     padding: 10px;
     background-color: var(--bg-cabecalho);
@@ -98,7 +99,7 @@ body{
     display: flex;
 }
 
-.btn-lang{
+.btn-lang {
     background: none;
     padding: 0 10px;
     cursor: pointer;
@@ -111,7 +112,7 @@ body{
     border-radius: 50%;
 }
 
-#btnAlterarTema{
+#btnAlterarTema {
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -119,7 +120,7 @@ body{
     align-self: center;
 }
 
-.home{
+.home {
     display: flex;
     min-height: calc(100vh - 125px);
     align-items: end;
@@ -127,7 +128,7 @@ body{
     padding-bottom: 20px;
 }
 
-.informacoes{
+.informacoes {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -137,26 +138,26 @@ body{
     padding-bottom: 10px;
 }
 
-.informacoes h1{
-    display:ruby-text;
+.informacoes h1 {
+    display: ruby-text;
     font-family: "Raleway", sans-serif;
     font-size: 38px;
     padding-top: 10px;
 }
 
-.informacoes p{
+.informacoes p {
     display: block;
     font-family: "Raleway", sans-serif;
     font-size: 22px;
     margin-bottom: 10px;
 }
 
-.redes-sociais{
+.redes-sociais {
     display: flex;
     gap: 20px;
 }
 
-.redes-sociais a i{
+.redes-sociais a i {
     border: 1px solid var(--text-color);
     /* border: 1px solid #000; */
     border-radius: 50%;
@@ -168,7 +169,7 @@ body{
     transition: 0.4s;
 }
 
-.redes-sociais a i:hover{
+.redes-sociais a i:hover {
     color: #20b3ab;
     border: 1px solid #20b3ab;
     transform: scale(1.1);
@@ -176,22 +177,23 @@ body{
 
 #foto-greg {
     border-radius: 90%;
-    margin-bottom: 20px; 
-    margin-right: 20px; 
+    margin-bottom: 20px;
+    margin-right: 20px;
     width: 450px;
-    HEIGHT: 450px;
+    height: 450px;
     object-fit: cover;
     object-position: 50% 20%;
     border: 1px solid #000;
 }
 
-.titulo{
+.titulo {
     text-align: center;
     font-size: 50px;
     line-height: 4rem;
-    }
+}
 
-.container-projetos{
+/* Projects Page */
+.container-projetos {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
@@ -200,18 +202,18 @@ body{
     padding-top: 30px;
 }
 
-.projeto{
+.projeto {
     max-width: 225px;
     max-height: 500px;
     position: relative;
 }
 
-.projeto a{
+.projeto a {
     display: flex;
     flex-direction: column;
 }
 
-.projeto h3{
+.projeto h3 {
     background-color: black;
     padding: 10px;
     font-size: 16px;
@@ -219,7 +221,7 @@ body{
     color: #fff;
 }
 
-.informacoes-projeto{
+.informacoes-projeto {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -233,12 +235,12 @@ body{
     color: #fff;
 }
 
-.informacoes-projeto:hover{
+.informacoes-projeto:hover {
     opacity: 0.9;
     background-color: #000;
-}  
+}
 
-.btn-mostrar-projetos{
+.btn-mostrar-projetos {
     background: var(--bg-btn);
     border: 1px solid var(--text-color);
     border-radius: 15px;
@@ -254,12 +256,12 @@ body{
     cursor: pointer;
 }
 
-.btn-mostrar-projetos:hover{
+.btn-mostrar-projetos:hover {
     background-color: #9443d8;
     transition: 0.3s;
 }
 
-.btn-ocultar-projetos{
+.btn-ocultar-projetos {
     background: var(--bg-btn);
     border: 1px solid var(--text-color);
     border-radius: 15px;
@@ -275,7 +277,7 @@ body{
     cursor: pointer;
 }
 
-.btn-ocultar-projetos:hover{
+.btn-ocultar-projetos:hover {
     background-color: #9443d8;
     transition: 0.3s;
 }
@@ -284,49 +286,49 @@ body{
     display: none !important;
 }
 
-.shrink{
+.shrink {
     text-align: justify;
 }
 
-.informacoes-projeto p:not(.shrink){
+.informacoes-projeto p:not(.shrink) {
     text-align: center;
     font-weight: 700;
 }
 
 /* Certificates */
-.habilities > .titulo{
+.habilities>.titulo {
     padding-bottom: 10px;
 }
 
-.skills{
+.skills {
     display: flex;
     justify-content: space-around;
-    background-color:var(--type);
+    background-color: var(--type);
     height: 70px;
 }
 
-.technologies{
-    background-color:transparent;
+.technologies {
+    background-color: transparent;
     color: var(--text-color);
     cursor: pointer;
     font-size: 20px;
     padding: 0px 20px;
 }
 
-.technologies:hover{
+.technologies:hover {
     border: 2px solid #000;
     border-radius: 10px;
     padding: 0px 30px;
 }
 
-.certificados{
+.certificados {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 20px;
 }
 
-.certificado{
+.certificado {
     display: flex;
     flex-direction: column;
     width: 380px;
@@ -336,11 +338,11 @@ body{
 .img-certificado {
     overflow: hidden;
     padding-top: 10px;
-    OBJECT-FIT: cover;
+    object-fit: cover;
 }
 
 /* Experiences */
-.exp{
+.exp {
     margin-bottom: 40px;
 }
 
@@ -380,16 +382,11 @@ body{
 }
 
 /* Contact Me */
-.mailbox{
+.mailbox {
     margin-top: 10px;
     padding: 10px 40px;
     background-color: rgb(22 22 22 / 15%);
     border-radius: 50px;
-}
-
-.form-titulo {
-    text-align: center;
-    font-size: 50px;
 }
 
 form {
@@ -416,7 +413,7 @@ textarea {
     font-family: arial;
 }
 
-form button{
+form button {
     font-size: 20px;
     border-radius: 15px;
     cursor: pointer;

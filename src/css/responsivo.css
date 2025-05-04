@@ -1,5 +1,8 @@
-@media(max-width: 1000px) {
-    
+@media (max-width: 1100px) {
+    .pages {
+        font-size: 20px;
+    }
+
     .cabecalho {
         padding: 30px;
     }
@@ -18,7 +21,7 @@
     }
 
     .projetos .container-projetos {
-      padding: 30px;
+        padding: 30px;
     }
 
     #foto-greg {
@@ -26,20 +29,149 @@
     }
 }
 
-@media(max-width: 425px) {
+@media(max-width: 428px) {
+    
+    body {
+        margin: 0 10px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 { 
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .cabecalho {
+        flex-direction: column;
+    }
+
+    /* Home Page */
+    .home {
+        margin: 10px 0;
+        gap: 0;
+    }
+
     .home .informacoes h1 {
-        font-size: 30px;
+        font-size: 1.4rem;
     }
 
     .home .informacoes p {
-        font-size: 16px;
+        font-size: 1rem;
+        text-align: left;
     }
 
-    .home .container-foto img {
-        max-width: 320px;
+    .redes-sociais {
+        justify-content: center;
+        padding-top: 10px;
+        display: none;
+    }
+
+    #foto-greg {
+        margin: 0px;
+        width: 350px;
+        height: 350px;
+    }
+
+    /* Projects Page */
+    .titulo {
+        font-size: 35px;
+        padding-top: 20px;
+        line-height: 2rem;
     }
 
     .projetos {
         padding: 30px;
+    }
+
+    /* Certificates */
+    .skills {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        height: fit-content;
+    }
+
+    .technologies {
+        font-size: 30px;
+        padding: 10px;
+    }
+
+    .technologies:hover{
+        padding: 10px;
+    }
+
+    .certificados {
+        gap: 0px;
+        justify-content: space-around;
+        margin-bottom: 1.5rem;
+    }
+
+    .certificado {
+        height: 240px;
+    }
+
+    .img-certificado{
+        min-height: 240px;
+    }
+
+    /* Experiences */
+    .exp {
+        margin-bottom: 20px;
+    }
+
+    .type {
+        padding: 0.4rem 1rem;
+        font-size: 1.5rem
+    }
+    
+    .type h2 {
+        font-size: 20px;
+    }
+    
+    .profissional {
+        padding: 0.6rem 1.2rem 0;
+    }
+
+    .duracao {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.2rem 0;
+    }
+
+    .duracao + p {
+        padding: 0.2rem 0;
+    }
+
+    .job {
+        padding-bottom: 0.4rem;
+    }
+
+    .estudo {
+        padding: 0.6rem 1rem;
+        text-align: justify;
+    }
+
+    .facul {
+        padding-bottom: 0.5rem;
+    }
+
+    .projeto-facul > h3 {
+        padding: 0.2rem 0;
+    }
+
+    /* Contacte me */
+    .mailbox{
+        margin-bottom: 30px;
+        padding: 10px 20px;
+    }
+
+    .form-titulo {
+        text-align: center;
+        font-size: 50px;
     }
 }
