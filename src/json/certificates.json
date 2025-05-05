@@ -47,13 +47,6 @@
         ]
     },
     {
-        "title": "Certificado de metodologias ágeis",
-        "image": "../imagens/Metodologias_ageis.jpg",
-        "skills": [
-            "Miscelaneous"
-        ]
-    },
-    {
         "title": "Certificado de um curso de backend com Javascript",
         "image": "../imagens/Backend_ada_tech.jpg",
         "skills": [
@@ -69,6 +62,13 @@
             "Typescript",
             "Javascript",
             "Node.js"
+        ]
+    },
+    {
+        "title": "Certificado de metodologias ágeis",
+        "image": "../imagens/Metodologias_ageis.jpg",
+        "skills": [
+            "Miscelaneous"
         ]
     }
 ]

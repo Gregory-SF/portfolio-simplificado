@@ -20,7 +20,7 @@
         align-items: center;
     }
 
-    .projetos .container-projetos {
+    .container-projetos {
         padding: 30px;
     }
 
@@ -57,8 +57,21 @@
         gap: 0;
     }
 
-    .home .informacoes h1 {
-        font-size: 1.4rem;
+    .informacoes {
+        max-width: 100%;
+        text-wrap: balance;
+    }
+
+    .home-titulo {
+        display: none;
+        font-size: 1.5rem;
+        padding-bottom: 10px;
+    }
+
+    .home-titulo-short {
+        display: block;
+        font-size: 1.5rem;
+        padding-bottom: 10px;
     }
 
     .home .informacoes p {
@@ -78,6 +91,10 @@
         height: 350px;
     }
 
+    .container-foto > .redes-sociais {
+        display: flex;
+    }
+
     /* Projects Page */
     .titulo {
         font-size: 35px;
@@ -86,9 +103,34 @@
     }
 
     .projetos {
-        padding: 30px;
+        padding: 30px 0; 
     }
 
+    .container-projetos {
+        padding: 20px 0px;
+        justify-content: space-around;
+        margin-bottom: 1rem;
+    }
+
+    .projeto {
+        max-width: 170px;
+        max-height: 300px;    
+    }
+    
+    .projeto h3 {
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+
+    .projeto-texto {
+        padding: 10px;
+        font-size: 0.8rem;
+    }
+
+    .informacoes-projeto p:not(.projeto-texto) {
+        display: none;
+    }
+    
     /* Certificates */
     .skills {
         flex-wrap: wrap;
@@ -97,26 +139,30 @@
     }
 
     .technologies {
-        font-size: 30px;
-        padding: 10px;
+        font-size: 0.9rem;
+        padding: 0.3rem;
     }
 
     .technologies:hover{
-        padding: 10px;
+        padding: 0.3rem;
+        border: 1px solid #000;
     }
 
     .certificados {
-        gap: 0px;
-        justify-content: space-around;
+        gap: 4px;
+        justify-content: space-between;
         margin-bottom: 1.5rem;
+        display: flex;
+        flex-wrap: wrap;
     }
 
     .certificado {
-        height: 240px;
+        height: 140px;
+        width: 180px;
     }
 
-    .img-certificado{
-        min-height: 240px;
+    .img-certificado {
+        min-height: 130px;
     }
 
     /* Experiences */

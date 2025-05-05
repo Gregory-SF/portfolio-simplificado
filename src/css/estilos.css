@@ -138,11 +138,15 @@ body {
     padding-bottom: 10px;
 }
 
-.informacoes h1 {
+.home-titulo {
     display: ruby-text;
     font-family: "Raleway", sans-serif;
     font-size: 38px;
     padding-top: 10px;
+}
+
+.home-titulo-short {
+    display: none;
 }
 
 .informacoes p {
@@ -186,6 +190,10 @@ body {
     border: 1px solid #000;
 }
 
+.container-foto > .redes-sociais {
+    display: none;
+}
+
 .titulo {
     text-align: center;
     font-size: 50px;
@@ -227,11 +235,9 @@ body {
     height: 100%;
     opacity: 0;
     transition: 0.3s;
-    padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    text-align: justify;
     color: #fff;
 }
 
@@ -286,13 +292,15 @@ body {
     display: none !important;
 }
 
-.shrink {
+.projeto-texto {
     text-align: justify;
+    padding: 10px;
 }
 
-.informacoes-projeto p:not(.shrink) {
+.informacoes-projeto p:not(.projeto-texto) {
     text-align: center;
     font-weight: 700;
+    padding: 10px;
 }
 
 /* Certificates */

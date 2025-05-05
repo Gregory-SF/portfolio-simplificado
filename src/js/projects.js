@@ -76,7 +76,7 @@ function criarCard(fullInfo) {
         anchor.appendChild(container_texto);
         const texto = document.createElement('p');
         texto.innerText=info.description;
-        texto.className='shrink';
+        texto.className='projeto-texto';
         container_texto.appendChild(texto);
         const vergit = document.createElement('p');
         vergit.innerText='Ver projeto no GitHub';
