@@ -3,6 +3,7 @@ const json = "src/json/en.json";
 document.addEventListener("DOMContentLoaded", async (event) =>{
     salvarTemaAtual();
     salvarIdiomaAtual();
+    toggleMenu();
 });
 
 function salvarTemaAtual() {
@@ -35,7 +36,9 @@ function alterarIdioma(){
 }
 
 function carregarIdioma(idioma) {    
-    fetch(`/portfolio-simplificado/src/json/${idioma}.json`)
+    fetch(`/src/json/${idioma}.json`)
+    // Para a versão final, descomentar essa linha
+    // fetch(`/portfolio-simplificado/src/json/${idioma}.json`)
     .then(data => data.json())
     .then(data => {
         traduzirPagina(data);
@@ -52,7 +55,9 @@ function traduzirPagina(linguagem) {
         }
     });
 
-    document.getElementById("bandeira").setAttribute("src", `/portfolio-simplificado/src/imagens/${idiomaAtual}.jpg`);
+    // Para a versão final, descomentar essa linha
+    // document.getElementById("bandeira").setAttribute("src", `/portfolio-simplificado/src/imagens/${idiomaAtual}.jpg`);
+    document.getElementById("bandeira").setAttribute("src", `/src/imagens/${idiomaAtual}.jpg`);
 
     /// PARA IMAGENS
     document.querySelectorAll("[data-i18n-alt]").forEach(elemento =>{
@@ -71,6 +76,24 @@ function traduzirPagina(linguagem) {
             elemento.textContent = '';
             elemento.setAttribute('placeholder',linguagem[chave]);
         }
+    });
+}
+
+function toggleMenu() {
+    const cabecalho = document.body.querySelector('.cabecalho'); 
+    const btnMenu = document.body.querySelector('.btn-menu'); 
+    cabecalho.classList.add('hide'); 
+
+    btnMenu.addEventListener("click", ()=>{   
+        cabecalho.classList.remove("hide");
+        btnMenu.classList.add("hide");
+    });
+
+    window.addEventListener("click", (e)=>{   
+        if(e.target!=btnMenu && !(cabecalho.classList.contains('hide'))) {
+            cabecalho.classList.add("hide");
+            btnMenu.classList.remove("hide");
+        };
     });
 }
 

@@ -48,8 +48,66 @@
     }
 
     .cabecalho {
+        margin-top: 20px;
+        padding: 0;
+        flex-direction: column;
+        align-items: normal;
+        border-radius: 0;
+        background-color: #000;
+        height: 100%;
+        position: fixed;
+        width: 200px;
+        overflow: auto;
+        justify-content: flex-start;
+        z-index: 1;
+    }
+
+    .btn-menu {
+        display: block;
+    }
+
+    .logo {
+        border-radius: 60%;
+        line-height: 70px;
+    }
+
+    .logo:hover{
+        color: white;
+        border: 2px solid white;
+    }
+
+    .pages {
+        display: flex;
         flex-direction: column;
     }
+
+    .btn-pages:not(.clicked):hover {
+        padding: unset;
+        border: none;
+        background-color: #555;
+        color: white;
+        width: 100%;
+        border-radius: 0;
+    }   
+    
+    .clicked {
+        padding: 10px;
+    }
+    
+    .menu {
+        justify-content: space-between;
+    }
+    
+    .bandeira {
+    border-radius: 0;
+    }
+    
+    #btnAlterarTema {
+        width: 45px;
+        height: 45px;
+        border-radius: 0;
+    }
+    
 
     /* Home Page */
     .home {
@@ -65,12 +123,12 @@
     .home-titulo {
         display: none;
         font-size: 1.5rem;
-        padding-bottom: 10px;
+        padding-bottom: 20px;
     }
 
     .home-titulo-short {
         display: block;
-        font-size: 1.5rem;
+        font-size: 2rem;
         padding-bottom: 10px;
     }
 
