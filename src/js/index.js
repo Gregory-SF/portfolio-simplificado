@@ -82,20 +82,25 @@ function traduzirPagina(linguagem) {
 function toggleMenu() {
     const cabecalho = document.body.querySelector('.cabecalho'); 
     const btnMenu = document.body.querySelector('.btn-menu'); 
-    cabecalho.classList.add('hide'); 
-
-    btnMenu.addEventListener("click", ()=>{   
+    if(window.innerWidth <= 428) {
+        document.body.querySelector('.logo').innerHTML= "Home Page";
+        // cabecalho.classList.add('hide'); 
+        btnMenu.addEventListener("click", ()=>{   
+            cabecalho.classList.remove("hide");
+            btnMenu.classList.add("hide");
+        });
+        window.addEventListener("click", (e)=>{   
+            if(e.target!=btnMenu && !(cabecalho.classList.contains('hide'))) {
+                cabecalho.classList.add("hide");
+                btnMenu.classList.remove("hide");
+            };
+        });
+    } else {
         cabecalho.classList.remove("hide");
-        btnMenu.classList.add("hide");
-    });
-
-    window.addEventListener("click", (e)=>{   
-        if(e.target!=btnMenu && !(cabecalho.classList.contains('hide'))) {
-            cabecalho.classList.add("hide");
-            btnMenu.classList.remove("hide");
-        };
-    });
+    }
 }
+
+window.addEventListener('resize', toggleMenu);
 
 var prevScrollpos = window.scrollY;
 window.onscroll=function () {

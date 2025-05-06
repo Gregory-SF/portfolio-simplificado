@@ -58,7 +58,8 @@ body {
 }
 
 .btn-menu {
-    display: none;
+    /* background-color: transparent; */
+    display: none;  
 }
 
 .logo {
